@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!-- Блок Playlist maker -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#3772E7"
+        android:paddingTop="10dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp" >
+        <TextView
+            android:text="Playlist maker"
+            android:textColor="@color/white"
+            android:layout_height="26dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="left"
+            android:textSize="22sp" />
+    </LinearLayout>
+    <!-- Родитель -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="56dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="28dp"
+        android:paddingLeft="16dp">
+        <!-- Блок 1 Поиск  -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="@string/search"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:paddingLeft ="16dp"
+            android:paddingRight="16dp"
+            app:icon="@drawable/ico_search24"
+            app:iconGravity="textStart"
+            app:iconTint="@color/black"
+            android:backgroundTint="@color/white"
+            app:cornerRadius="16dp">
+        </Button>
+        <!-- Блок 2 Медиатека  -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="@string/mediateka"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:paddingLeft ="16dp"
+            android:paddingRight="16dp"
+            app:icon="@drawable/ico_media24"
+            app:iconGravity="textStart"
+            app:iconTint="@color/black"
+            app:cornerRadius="16dp">
+        </Button>
+        <!-- Блок 3 Настройки -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:paddingLeft ="16dp"
+            android:paddingRight="16dp"
+            android:layout_gravity="center"
+            android:text="@string/settings"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            app:icon="@drawable/ico_settings24"
+            app:iconGravity="textStart"
+            app:iconTint="@color/black"
+            app:cornerRadius="16dp">
+        </Button>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

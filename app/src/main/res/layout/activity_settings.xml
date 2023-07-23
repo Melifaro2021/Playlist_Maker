@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!-- -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        <!-- Строка 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+
+            >
+            <!-- Стрелка назад -->
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ico_arr_back" />
+            <!-- Заголовок настройки -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingRight="86dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="12dp"
+                android:background="@color/white"
+                android:text="@string/settings"
+                android:textColor="@color/black"
+                android:textSize="26sp" />
+        </LinearLayout>
+        <!-- Строка 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white" >
+            <!-- Заголовок Темная тема -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:paddingLeft="16dp"
+                android:paddingTop="21dp"
+                android:paddingBottom="21dp"
+                android:text="@string/dark_theme"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchcompat"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+        <!-- Строка 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:paddingTop="19dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="16dp"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_app"
+                    android:layout_gravity="start"
+                    android:textSize="16sp"
+                    android:layout_marginRight="32dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ico_share24"
+                    android:layout_gravity="end"/>
+            </FrameLayout>
+        </LinearLayout>
+        <!-- Строка 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:paddingTop="19dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="16dp"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/write_to_support"
+                    android:layout_marginRight="32dp"
+                    android:textSize="16sp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ico_support24"
+                    android:layout_gravity="end"/>
+            </FrameLayout>
+        </LinearLayout>
+        <!-- Строка 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:paddingTop="19dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="16dp"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_of_use"
+                    android:layout_marginRight="32dp"
+                    android:textSize="16sp"
+                    android:background="@color/white"
+                    android:textColor="@color/black" />
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ico_arr_forward24"
+                    android:layout_gravity="end"/>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
