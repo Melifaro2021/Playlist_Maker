@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <!-- -->
+    <!-- Общий контейнер -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,9 +19,7 @@
             android:orientation="horizontal"
             android:paddingLeft="4dp"
             android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-
-            >
+            android:paddingBottom="4dp" >
             <!-- Стрелка назад -->
             <ImageView
                 android:layout_width="48dp"
@@ -60,7 +58,7 @@
                 android:text="@string/dark_theme"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
-
+            <!-- Переключатель -->
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchcompat"
                 android:layout_width="56dp"
@@ -81,11 +79,11 @@
             android:paddingTop="19dp"
             android:paddingRight="8dp"
             android:paddingBottom="18dp"
-            android:paddingLeft="16dp"
-            >
+            android:paddingLeft="16dp" >
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <!-- Поделиться приложением -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -111,11 +109,11 @@
             android:paddingTop="19dp"
             android:paddingRight="8dp"
             android:paddingBottom="18dp"
-            android:paddingLeft="16dp"
-            >
+            android:paddingLeft="16dp">
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <!-- Написать в техподдержку -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -123,8 +121,7 @@
                     android:layout_marginRight="32dp"
                     android:textSize="16sp"
                     android:background="@color/white"
-                    android:textColor="@color/black"
-                    />
+                    android:textColor="@color/black" />
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -141,11 +138,11 @@
             android:paddingTop="19dp"
             android:paddingRight="8dp"
             android:paddingBottom="18dp"
-            android:paddingLeft="16dp"
-            >
+            android:paddingLeft="16dp" >
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <!-- Пользовательское соглашение -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
