@@ -17,12 +17,12 @@
         android:paddingBottom="12dp"
         android:paddingLeft="12dp" >
         <TextView
-            android:text="Playlist maker"
+            android:text="@string/playlist_maker"
             android:textColor="@color/white"
             android:layout_height="26dp"
             android:layout_width="wrap_content"
         	android:textStyle="bold"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:textSize="22sp" />
     </LinearLayout>
     <!-- Родитель -->
@@ -30,12 +30,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="80dp"
         android:paddingRight="16dp"
         android:paddingBottom="28dp"
         android:paddingLeft="16dp">
         <!-- Блок 1 Поиск  -->
+        <!-- Стрелка назад -->
+
         <Button
+            android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -50,10 +53,12 @@
             app:iconGravity="textStart"
             app:iconTint="@color/black"
             android:backgroundTint="@color/white"
-            app:cornerRadius="16dp">
+            app:cornerRadius="16dp"
+            android:foreground="?attr/selectableItemBackground">
         </Button>
         <!-- Блок 2 Медиатека  -->
         <Button
+            android:id="@+id/media"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
@@ -68,10 +73,12 @@
             app:icon="@drawable/ico_media24"
             app:iconGravity="textStart"
             app:iconTint="@color/black"
-            app:cornerRadius="16dp">
+            app:cornerRadius="16dp"
+            android:foreground="?attr/selectableItemBackground">
         </Button>
         <!-- Блок 3 Настройки -->
         <Button
+            android:id="@+id/settings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -86,7 +93,8 @@
             app:icon="@drawable/ico_settings24"
             app:iconGravity="textStart"
             app:iconTint="@color/black"
-            app:cornerRadius="16dp">
+            app:cornerRadius="16dp"
+            android:foreground="?attr/selectableItemBackground">
         </Button>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
