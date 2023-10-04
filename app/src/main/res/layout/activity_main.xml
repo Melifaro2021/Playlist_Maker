@@ -7,94 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <!-- Блок Playlist maker -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#3772E7"
-        android:paddingTop="10dp"
-        android:paddingRight="12dp"
-        android:paddingBottom="12dp"
-        android:paddingLeft="12dp" >
-        <TextView
-            android:text="@string/playlist_maker"
-            android:textColor="@color/white"
-            android:layout_height="26dp"
-            android:layout_width="wrap_content"
-        	android:textStyle="bold"
-            android:layout_gravity="start"
-            android:textSize="22sp" />
+    <LinearLayout style="@style/pageMain_box_for_Head"
+        tools:ignore="MissingConstraints">
+        <TextView android:text="@string/playlist_maker"
+            style="@style/pageMain_Head"/>
     </LinearLayout>
     <!-- Родитель -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="80dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="28dp"
-        android:paddingLeft="16dp">
-        <!-- Блок 1 Поиск  -->
-        <!-- Стрелка назад -->
-
-        <Button
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center"
+    <LinearLayout style="@style/pageMain_box_for_btn"
+        tools:ignore="MissingConstraints">
+        <!-- Кнопка 1 Поиск  -->
+        <Button android:id="@+id/search"
             android:text="@string/search"
-            android:textSize="26sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="16dp"
-            android:paddingLeft ="16dp"
-            android:paddingRight="16dp"
             app:icon="@drawable/ico_search24"
-            app:iconGravity="textStart"
-            app:iconTint="@color/black"
-            android:backgroundTint="@color/white"
-            app:cornerRadius="16dp"
-            android:foreground="?attr/selectableItemBackground">
+            style="@style/pageMain_btn">
         </Button>
-        <!-- Блок 2 Медиатека  -->
-        <Button
-            android:id="@+id/media"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:layout_weight="1"
-            android:layout_gravity="center"
+        <!-- Кнопка 2 Медиатека -->
+        <Button android:id="@+id/media"
             android:text="@string/mediateka"
-            android:textSize="26sp"
-            android:textColor="@color/black"
-            android:layout_marginTop="16dp"
-            android:paddingLeft ="16dp"
-            android:paddingRight="16dp"
             app:icon="@drawable/ico_media24"
-            app:iconGravity="textStart"
-            app:iconTint="@color/black"
-            app:cornerRadius="16dp"
-            android:foreground="?attr/selectableItemBackground">
+            style="@style/pageMain_btn">
         </Button>
-        <!-- Блок 3 Настройки -->
-        <Button
-            android:id="@+id/settings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="16dp"
-            android:paddingLeft ="16dp"
-            android:paddingRight="16dp"
-            android:layout_gravity="center"
+        <!-- Кнопка 3 Настройки -->
+        <Button android:id="@+id/settings"
             android:text="@string/settings"
-            android:textSize="26sp"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"
             app:icon="@drawable/ico_settings24"
-            app:iconGravity="textStart"
-            app:iconTint="@color/black"
-            app:cornerRadius="16dp"
-            android:foreground="?attr/selectableItemBackground">
+            style="@style/pageMain_btn">
         </Button>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
