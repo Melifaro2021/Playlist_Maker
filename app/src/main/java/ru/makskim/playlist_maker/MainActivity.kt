@@ -36,29 +36,5 @@ class MainActivity : AppCompatActivity() {
                 SettingsActivity::class.java)
             startActivity(displayIntent3)
         }
-
-        /* Кнопка Настройки 2 */
-        /* TOAST Способ 1. Реализация анонимного класса Start
-        val settingsButton = findViewById<Button>(R.id.settings)
-        val imageClickListener: View.OnClickListener = object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                    Toast.makeText(
-                        this@MainActivity,
-                        "Нажали кнопку Настройки",
-                        Toast.LENGTH_SHORT).show()
-            }
-        }
-        settingsButton.setOnClickListener(imageClickListener)*/
-        //TOAST Способ 1. Реализация анонимного класса END
-
-        /* Кнопка Настройки 3
-        // TOAST Способ 2. Лямбда-выражение Start
-        settingsButton.setOnClickListener {
-            Toast.makeText(
-                this@MainActivity,
-                "Настройки!",
-                Toast.LENGTH_SHORT).show()
-        }*/
-        // TOAST Способ 2. Лямбда-выражение END
     }
 }
