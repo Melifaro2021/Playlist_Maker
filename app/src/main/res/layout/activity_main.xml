@@ -19,7 +19,7 @@
         <Button android:id="@+id/search"
             android:text="@string/search"
             app:icon="@drawable/ico_search24"
-            style="@style/pageMain_btn">
+            style="@style/pageMain_btn" >
         </Button>
         <!-- Кнопка 2 Медиатека -->
         <Button android:id="@+id/media"

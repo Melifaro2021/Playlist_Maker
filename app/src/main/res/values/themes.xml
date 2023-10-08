@@ -8,7 +8,7 @@
         <!-- 2. это самые светлые или тёмные оттенки цветов бренда -->
         <item name="colorPrimaryVariant">@color/blueDark</item>
         <!-- 3. цвета элементов переднего плана -->
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
 
         <!-- Цветовая схема 2 -->
         <!-- 1. Основной цвет -->

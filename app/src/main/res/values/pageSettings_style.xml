@@ -4,7 +4,7 @@
     <style name="pageSettings_string_head">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@color/white</item>
+        <item name="android:color">@color/txt_Settings_Page</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:paddingTop">4dp</item>
         <item name="android:paddingRight">52dp</item>
@@ -19,6 +19,7 @@
         <item name="android:src">@drawable/ico_arr_back</item>
         <item name="android:padding">12dp</item>
         <item name="android:contentDescription">Back arrow</item>
+        <item name="iconTint">@color/ico_Settings_Page</item>
     </style>
     <!-- Текст Заголовок настройки  -->
     <style name="pageSettings_txt_settings">
@@ -29,9 +30,8 @@
         <item name="android:paddingRight">86dp</item>
         <item name="android:paddingBottom">12dp </item>
         <item name="android:paddingLeft">12dp</item>
-        <item name="android:background">@color/white</item>
-        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">26sp</item>
+        <item name="android:color">@color/background_Settings_Page</item>
     </style>
     <!-- Текст строки ночной темы Start  -->
     <style name="pageSettings_txt_night_theme">
@@ -39,11 +39,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">start</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/white</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingTop">21dp</item>
         <item name="android:paddingBottom">21dp</item>
-        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">16sp</item>
     </style>
     <!-- Переключатель Ночной темы  -->
@@ -61,7 +59,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:paddingTop">19dp</item>
         <item name="android:paddingRight">12dp</item>
         <item name="android:paddingBottom">18dp</item>
@@ -74,15 +72,14 @@
     <style name="pageSettings_string_text">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:background">@color/white</item>
         <item name="android:textSize">16sp</item>
         <item name="android:layout_marginRight">32dp</item>
     </style>
     <style name="pageSettings_string_ico">
+        <item name="android:iconTint">@color/ico_Settings_Page</item>
         <item name="android:layout_width">24dp</item>
         <item name="android:layout_height">24dp</item>
         <item name="android:layout_gravity">end</item>
     </style>
-    <!-- Стили для простой строки End -->
+    <!-- Стили для простой строки End <item name="android:color">#FFFFFFFF</item>-->
 </resources>
