@@ -13,17 +13,14 @@
         <item name="android:layout_marginBottom">28dp</item>
     </style>
     <!-- Стрелка назад -->
-    <style name="page_settings_arr_back" parent="Widget.AppCompat.ImageView">
-        <item name="android:tint">?attr/ico_Settings_Page</item>
+    <style name="page_settings_arr_back"  >
+        <item name="android:tint">@color/ico_settings_page</item>
         <item name="android:layout_width">@dimen/ico48</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:padding">@dimen/pad12dp</item>
         <item name="android:contentDescription">Back arrow</item>
-        <!--item name="iconTint">@color/ico_Settings_Page</item>
-        <item name="color">@color/ico_Settings_Page</item>
-        <item name="android:src">@drawable/ico_arr_back</item-->
-</style>
-<!-- Текст Заголовок настройки  -->
+    </style>
+<!-- Текст Заголовок настройки -->
     <style name="page_settings_txt_settings">
         <item name="android:text">match_parent</item>
         <item name="android:layout_width">match_parent</item>
@@ -33,9 +30,9 @@
         <item name="android:paddingBottom">@dimen/pad12dp</item>
         <item name="android:paddingLeft">@dimen/pad12dp</item>
         <item name="android:textSize">@dimen/head26</item>
-        <item name="android:color">@color/background_Settings_Page</item>
+        <item name="android:color">@color/background_settings_page</item>
     </style>
-    <!-- Текст строки ночной темы Start  -->
+    <!-- Текст строки ночной темы Start -->
     <style name="page_settings_txt_night_theme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -48,6 +45,7 @@
     </style>
     <!-- Переключатель Ночной темы  -->
     <style name="page_settings_switch">
+        <item name="android:tint">@color/ico_settings_page</item>
         <item name="android:layout_width">56dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:paddingTop">11dp</item>
@@ -78,10 +76,10 @@
         <item name="android:layout_marginRight">32dp</item>
     </style>
     <style name="page_settings_string_ico">
-        <item name="android:iconTint">@color/ico_Settings_Page</item>
+        <item name="android:tint">@color/ico_settings_page</item>
         <item name="android:layout_width">@dimen/ico24</item>
         <item name="android:layout_height">@dimen/ico24</item>
         <item name="android:layout_gravity">end</item>
     </style>
-    <!-- Стили для простой строки End <item name="android:color">#FFFFFFFF</item>-->
+    <!-- Стили для простой строки End -->
 </resources>

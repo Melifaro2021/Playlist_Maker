@@ -19,7 +19,6 @@
             <ImageView
                 android:src="@drawable/ico_arr_back"
                 android:id="@+id/arrBack"
-                app:tint="@color/ico_settings_page"
                 android:contentDescription="@string/arr"
                 style="@style/page_settings_arr_back" />
             <!-- Заголовок  -->
@@ -41,7 +40,6 @@
                 android:id="@+id/switchcompat"
                 style="@style/page_settings_switch" />
         </LinearLayout>
-
         <!-- Строка 3 Поделиться приложением -->
         <LinearLayout style="@style/page_settings_string_simple">
             <FrameLayout style="@style/page_settings_string_frame">
@@ -58,7 +56,6 @@
         </LinearLayout>
         <!-- Строка 4 Написать в техподдержку -->
         <LinearLayout style="@style/page_settings_string_simple">
-
             <FrameLayout style="@style/page_settings_string_frame">
                 <!-- Заголовок  -->
                 <TextView
