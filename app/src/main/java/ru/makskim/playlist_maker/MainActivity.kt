@@ -3,9 +3,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
-import android.widget.Toast
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,26 +13,26 @@ class MainActivity : AppCompatActivity() {
         // Кнопка Поиск
         val searchButton = findViewById<Button>(R.id.search)
         searchButton.setOnClickListener {
-            val displayIntent = Intent(
+            val goToSearch = Intent(
                 this,
                 SearchActivity::class.java)
-            startActivity(displayIntent)
+            startActivity(goToSearch)
         }
         // Кнопка Медиатека
         val mediaButton = findViewById<Button>(R.id.media)
         mediaButton.setOnClickListener {
-            val displayIntent2 = Intent(
+            val goToMedia = Intent(
                 this,
                 MediatekaActivity::class.java)
-            startActivity(displayIntent2)
+            startActivity(goToMedia)
         }
         /* Кнопка Настройки 1*/
         val settingsButton = findViewById<Button>(R.id.settings)
         settingsButton.setOnClickListener {
-            val displayIntent3 = Intent(
+            val goToSettings = Intent(
                 this,
                 SettingsActivity::class.java)
-            startActivity(displayIntent3)
+            startActivity(goToSettings)
         }
     }
 }

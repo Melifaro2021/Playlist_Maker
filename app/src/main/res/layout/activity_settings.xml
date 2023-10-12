@@ -11,18 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_Settings_Page"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:orientation="vertical" >
         <!-- Строка 1 Настройки-->
-        <LinearLayout style="@style/pageSettings_string_head">
+        <LinearLayout style="@style/page_settings_string_head">
             <!-- Стрелка назад -->
             <ImageView
                 android:id="@+id/arrBack"
-                style="@style/pageSettings_arr_back" />
+                android:contentDescription="@string/arr"
+                style="@style/page_settings_arr_back" />
             <!-- Заголовок  -->
             <TextView
-                style="@style/pageSettings_txt_settings"
+                style="@style/page_settings_txt_settings"
                 android:text="@string/settings" />
         </LinearLayout>
         <!-- Строка 2 Темная тема -->
@@ -32,53 +31,54 @@
             android:orientation="horizontal">
             <!-- Заголовок  -->
             <TextView
-                style="@style/pageSettings_txt_night_theme"
+                style="@style/page_settings_txt_night_theme"
                 android:text="@string/dark_theme" />
             <!-- Переключатель -->
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchcompat"
-                style="@style/pageSettings_switch" />
+                style="@style/page_settings_switch" />
         </LinearLayout>
 
         <!-- Строка 3 Поделиться приложением -->
-        <LinearLayout style="@style/pageSettings_string_simple">
-
-            <FrameLayout style="@style/pageSettings_string_frame">
+        <LinearLayout style="@style/page_settings_string_simple">
+            <FrameLayout style="@style/page_settings_string_frame">
                 <!-- Заголовок  -->
                 <TextView
-                    style="@style/pageSettings_string_text"
+                    style="@style/page_settings_string_text"
                     android:text="@string/share_app" />
                 <!-- Картинка  -->
                 <ImageView
-                    style="@style/pageSettings_string_ico"
+                    style="@style/page_settings_string_ico"
+                    android:contentDescription="@string/share_app"
                     android:src="@drawable/ico_share24" />
             </FrameLayout>
         </LinearLayout>
         <!-- Строка 4 Написать в техподдержку -->
-        <LinearLayout style="@style/pageSettings_string_simple">
+        <LinearLayout style="@style/page_settings_string_simple">
 
-            <FrameLayout style="@style/pageSettings_string_frame">
+            <FrameLayout style="@style/page_settings_string_frame">
                 <!-- Заголовок  -->
                 <TextView
-                    style="@style/pageSettings_string_text"
+                    style="@style/page_settings_string_text"
                     android:text="@string/write_to_support" />
                 <!-- Картинка  -->
                 <ImageView
-                    style="@style/pageSettings_string_ico"
+                    style="@style/page_settings_string_ico"
+                    android:contentDescription="@string/terms_of_use"
                     android:src="@drawable/ico_support24" />
             </FrameLayout>
         </LinearLayout>
         <!-- Строка 5 Пользовательское соглашение -->
-        <LinearLayout style="@style/pageSettings_string_simple">
-
-            <FrameLayout style="@style/pageSettings_string_frame">
+        <LinearLayout style="@style/page_settings_string_simple">
+            <FrameLayout style="@style/page_settings_string_frame">
                 <!-- Заголовок  -->
                 <TextView
-                    style="@style/pageSettings_string_text"
+                    style="@style/page_settings_string_text"
                     android:text="@string/terms_of_use" />
                 <!-- Картинка  -->
                 <ImageView
-                    style="@style/pageSettings_string_ico"
+                    style="@style/page_settings_string_ico"
+                    android:contentDescription="@string/arr"
                     android:src="@drawable/ico_arr_forward24" />
             </FrameLayout>
         </LinearLayout>
