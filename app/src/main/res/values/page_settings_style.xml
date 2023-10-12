@@ -13,15 +13,17 @@
         <item name="android:layout_marginBottom">28dp</item>
     </style>
     <!-- Стрелка назад -->
-    <style name="page_settings_arr_back">
+    <style name="page_settings_arr_back" parent="Widget.AppCompat.ImageView">
+        <item name="android:tint">?attr/ico_Settings_Page</item>
         <item name="android:layout_width">@dimen/ico48</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:src">@drawable/ico_arr_back</item>
         <item name="android:padding">@dimen/pad12dp</item>
         <item name="android:contentDescription">Back arrow</item>
-        <item name="iconTint">@color/ico_Settings_Page</item>
-    </style>
-    <!-- Текст Заголовок настройки  -->
+        <!--item name="iconTint">@color/ico_Settings_Page</item>
+        <item name="color">@color/ico_Settings_Page</item>
+        <item name="android:src">@drawable/ico_arr_back</item-->
+</style>
+<!-- Текст Заголовок настройки  -->
     <style name="page_settings_txt_settings">
         <item name="android:text">match_parent</item>
         <item name="android:layout_width">match_parent</item>

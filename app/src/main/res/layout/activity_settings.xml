@@ -10,13 +10,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background_Settings_Page"
+        android:background="@color/background_settings_page"
         android:orientation="vertical" >
         <!-- Строка 1 Настройки-->
         <LinearLayout style="@style/page_settings_string_head">
             <!-- Стрелка назад -->
+            <!-- app:srcCompat="@drawable/ico_arr_back" -->
             <ImageView
+                android:src="@drawable/ico_arr_back"
                 android:id="@+id/arrBack"
+                app:tint="@color/ico_settings_page"
                 android:contentDescription="@string/arr"
                 style="@style/page_settings_arr_back" />
             <!-- Заголовок  -->

@@ -6,8 +6,8 @@
 
     <!-- Settings Page txt_Settings_Page-->
     <color name="txt_Settings_Page">#FFFFFFFF</color>
-    <color name="background_Settings_Page">#1A1B22</color>
-    <color name="ico_Settings_Page">#FFFFFFFF</color>
+    <color name="background_settings_page">#1A1B22</color>
+    <color name="ico_settings_page">#FFFFFFFF</color>
 
     <color name="black">#FF000000</color>
     <color name="blackSoft">#1A1B22</color>
