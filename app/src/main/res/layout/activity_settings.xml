@@ -42,7 +42,9 @@
         </LinearLayout>
         <!-- Строка 3 Поделиться приложением -->
         <LinearLayout style="@style/page_settings_string_simple">
-            <FrameLayout style="@style/page_settings_string_frame">
+            <FrameLayout
+                android:id="@+id/shareButton"
+                style="@style/page_settings_string_frame">
                 <!-- Заголовок  -->
                 <TextView
                     style="@style/page_settings_string_text"
@@ -56,7 +58,8 @@
         </LinearLayout>
         <!-- Строка 4 Написать в техподдержку -->
         <LinearLayout style="@style/page_settings_string_simple">
-            <FrameLayout style="@style/page_settings_string_frame">
+            <FrameLayout android:id="@+id/btn_support"
+                style="@style/page_settings_string_frame">
                 <!-- Заголовок  -->
                 <TextView
                     style="@style/page_settings_string_text"
