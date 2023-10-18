@@ -73,7 +73,8 @@
         </LinearLayout>
         <!-- Строка 5 Пользовательское соглашение -->
         <LinearLayout style="@style/page_settings_string_simple">
-            <FrameLayout style="@style/page_settings_string_frame">
+            <FrameLayout android:id="@+id/btn_terms"
+                style="@style/page_settings_string_frame">
                 <!-- Заголовок  -->
                 <TextView
                     style="@style/page_settings_string_text"

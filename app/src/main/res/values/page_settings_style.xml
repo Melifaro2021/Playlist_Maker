@@ -75,6 +75,7 @@
         <item name="android:textSize">@dimen/text16</item>
         <item name="android:layout_marginRight">32dp</item>
     </style>
+    <!-- Иконки -->
     <style name="page_settings_string_ico">
         <item name="android:tint">@color/ico_settings_page</item>
         <item name="android:layout_width">@dimen/ico24</item>

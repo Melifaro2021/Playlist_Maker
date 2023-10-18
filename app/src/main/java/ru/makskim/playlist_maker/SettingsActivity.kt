@@ -46,5 +46,14 @@ class SettingsActivity : AppCompatActivity() {
             shareIntent.putExtra(Intent.EXTRA_TEXT, support_text)
             startActivity(shareIntent)
         }
+        // Кнопка Пользовательское соглашение
+        val terms_button = findViewById<FrameLayout>(R.id.btn_terms)
+
+        terms_button.setOnClickListener {
+            val shareIntent = Intent(Intent.ACTION_VIEW)
+            val termsOfUseArticle = resources.getString(R.string.terms_article)
+            shareIntent.data = Uri.parse(termsOfUseArticle)
+            startActivity(shareIntent)
+        }
     }
 }

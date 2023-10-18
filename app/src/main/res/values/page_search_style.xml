@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Строка поиска -->
+    <style name="page_search_search_string">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@color/greySearch</item>
+        <item name="android:paddingRight">40dp</item>
+
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+    <!-- Иконка поиска -->
+    <style name="page_search_ico_loupe">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:background">#E6E8EB</item>
+
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+    <style name="page_search_placeholder">
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+</resources>

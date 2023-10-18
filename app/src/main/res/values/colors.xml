@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Main Page -->
+    <!-- ГЛАВНАЯ СТРАНИЦА START -->
     <color name="txt_color">#FF000000</color>
     <color name="background_color">#3772E7</color>
+    <!-- ГЛАВНАЯ СТРАНИЦА END -->
 
-    <!-- Settings Page -->
+    <!-- СТРАНИЦА НАСТРОЕК START -->
     <color name="txt_Settings_Page">#1A1B22</color>
     <color name="background_settings_page">#FFFFFFFF</color>
     <color name="ico_settings_page">#1A1B22</color>
+    <!-- СТРАНИЦА НАСТРОЕК END -->
+
+    <!-- СТРАНИЦА ПОИСКА START -->
+    <color name="greySearch">#E6E8EB</color>
+    <!-- СТРАНИЦА ПОИСКА END -->
+
 
     <color name="black">#FF000000</color>
     <color name="blackSoft">#1A1B22</color>
