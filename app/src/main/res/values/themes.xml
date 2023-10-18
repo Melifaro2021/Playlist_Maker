@@ -1,9 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Playlist_Maker" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+    <!-- по умолчанию - Theme.Material3.DayNight.NoActionBar-->
+    <style name="Base.Theme.Playlist_Maker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--  Цветовая схема 1 -->
+        <!-- 1. Основной цвет @color/-->
+        <item name="colorPrimary">@color/blue</item>
+        <!-- 2. это самые светлые или тёмные оттенки цветов бренда -->
+        <item name="colorPrimaryVariant">@color/blueDark</item>
+        <!-- 3. цвета элементов переднего плана -->
+        <item name="colorOnPrimary">@color/black</item>
 
+        <!-- Цветовая схема 2 -->
+        <!-- 1. Основной цвет -->
+        <item name="colorSecondary">@color/gray</item>
+        <!-- 2. это самые светлые или тёмные оттенки цветов бренда -->
+        <item name="colorSecondaryVariant">@color/pink</item>
+        <!-- 3. цвета элементов переднего плана -->
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your light theme here. -->
+    </style>
     <style name="Theme.Playlist_Maker" parent="Base.Theme.Playlist_Maker" />
 </resources>

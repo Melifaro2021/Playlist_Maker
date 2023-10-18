@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Отступы -->
+    <dimen name="pad21dp">21dp</dimen>
+    <dimen name="pad16dp">16dp</dimen>
+    <dimen name="pad12dp">12dp</dimen>
+    <dimen name="pad4dp">4dp</dimen>
+    <!-- Шрифты -->
+    <dimen name="head26">26sp</dimen>
+    <dimen name="head22">22sp</dimen>
+    <dimen name="text16">16sp</dimen>
+    <!-- Размер иконок -->
+    <dimen name="ico48">48sp</dimen>
+    <dimen name="ico24">24sp</dimen>
+</resources>
