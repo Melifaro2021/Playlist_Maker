@@ -6,19 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background_settings_page"
         android:orientation="vertical" >
         <!-- Строка 1 Настройки -->
-        <LinearLayout style="@style/page_settings_string_head">
+        <LinearLayout
+            style="@style/page_search_string_head">
             <!-- Стрелка назад -->
-            <!-- app:srcCompat="@drawable/ico_arr_back" -->
             <ImageView
                 android:src="@drawable/ico_arr_back"
-                android:id="@+id/arrBack"
                 android:contentDescription="@string/arr"
                 style="@style/page_settings_arr_back" />
             <!-- Заголовок  -->
@@ -26,19 +23,12 @@
                 style="@style/page_settings_txt_settings"
                 android:text="@string/search" />
         </LinearLayout>
-        <!-- Поисковая строка app:icon="@drawable/ico_search24"-->
-        <LinearLayout
-            style="@style/page_search_search_string">
-            <ImageView android:id="@+id/search"
-                app:srcCompat="@drawable/ico_search24"
-                style="@style/page_search_ico_loupe"  />
-            <TextView
-                style="@style/page_search_placeholder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/search" />
+        <!-- Поисковая строка -->
+        <LinearLayout  style="@style/page_search_search_string" >
+            <ImageView style="@style/page_search_ico"
+                app:srcCompat="@drawable/ico_search24" />
+            <EditText style="@style/page_search_placeholder" />
         </LinearLayout>
-    </LinearLayout>
+</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

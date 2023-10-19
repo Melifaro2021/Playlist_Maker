@@ -30,9 +30,9 @@
     </string>
     <!-- СТРАНИЦА НАСТРОЙКИ END -->
 
-    <!-- СТРАНИЦА ПОИСКА START -->
+    <!-- СТРАНИЦА ПОИСКА START
     <string name="" >
-    </string>
+    </string>-->
     <!-- СТРАНИЦА ПОИСКА END -->
 
 </resources>
