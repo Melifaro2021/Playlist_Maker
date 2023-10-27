@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ГЛАВНАЯ СТРАНИЦА START -->
-    <color name="txt_color">#FF000000</color>
+    <color name="txt_color">#1A1B22</color>
     <color name="background_color">#3772E7</color>
     <!-- ГЛАВНАЯ СТРАНИЦА END -->
 
@@ -9,13 +9,16 @@
     <color name="txt_Settings_Page">#1A1B22</color>
     <color name="background_settings_page">#FFFFFFFF</color>
     <color name="ico_settings_page">#1A1B22</color>
+    <color name="settings_page_txt_search_line">#AEAFB4</color>
     <!-- СТРАНИЦА НАСТРОЕК END -->
 
     <!-- СТРАНИЦА ПОИСКА START -->
-    <color name="greySearch">#E6E8EB</color>
+    <color name="ico_search">#AEAFB4</color><!-- иконки в строке поиска: Лупа, крестик, настройки, микрофон -->
+    <color name="search_background">#E6E8EB</color><!-- фон строки поиска-->
+    <color name="ico_search_page_arr_back">#1A1B22</color><!-- Стрелка назад -->
     <!-- СТРАНИЦА ПОИСКА END -->
 
-
+    <!-- Статичные цвета для темной и светлой темы -->
     <color name="black">#FF000000</color>
     <color name="blackSoft">#1A1B22</color>
     <color name="white">#FFFFFFFF</color>

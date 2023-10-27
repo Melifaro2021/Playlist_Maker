@@ -18,6 +18,9 @@ class SettingsActivity : AppCompatActivity() {
             val arrToMainIntent = Intent(this, MainActivity::class.java)
             startActivity(arrToMainIntent)
         }
+
+
+
         // Кнопка поделиться приложением
         val shareButton = findViewById<FrameLayout>(R.id.shareButton)
         shareButton.setOnClickListener {
@@ -33,9 +36,7 @@ class SettingsActivity : AppCompatActivity() {
         // Кнопка Написать в техподдержку
         val supportButton = findViewById<FrameLayout>(R.id.btn_support)
         supportButton.setOnClickListener {
-
             val shareIntent = Intent(Intent.ACTION_SENDTO)
-
             val support_text = resources.getString(R.string.text_mail)
             val support_theme = resources.getString(R.string.theme_mail)
             shareIntent.data = Uri.parse("mailto:")

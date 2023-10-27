@@ -3,35 +3,34 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/page_main_res"
     tools:context=".MainActivity">
-    <!-- Блок Playlist maker -->
-    <LinearLayout style="@style/pageMain_box_for_Head"
+    <!-- ГЛАВНАЯ СТРАНИЦА -->
+    <LinearLayout style="@style/page_main"
         tools:ignore="MissingConstraints">
-        <TextView android:text="@string/playlist_maker"
-            style="@style/pageMain_Head"/>
+        <TextView style="@style/page_main_head"
+            android:text="@string/playlist_maker"/>
     </LinearLayout>
-    <!-- Родитель -->
-    <LinearLayout style="@style/pageMain_box_for_btn"
+    <!-- БОКС ДЛЯ ТРЕХ КНОПОК -->
+    <LinearLayout style="@style/page_main_box_for_btn"
         tools:ignore="MissingConstraints">
-        <!-- Кнопка 1 Поиск  -->
-        <Button android:id="@+id/search"
+        <!-- КНОПКА 1 ПОИСК -->
+        <Button style="@style/page_main_btn"
+            android:id="@+id/search"
             android:text="@string/search"
-            app:icon="@drawable/ico_search24"
-            style="@style/pageMain_btn" >
+            app:icon="@drawable/ico_search24" >
         </Button>
-        <!-- Кнопка 2 Медиатека -->
-        <Button android:id="@+id/media"
+        <!-- КНОПКА 2 МЕДИАТЕКА -->
+        <Button style="@style/page_main_btn"
+            android:id="@+id/media"
             android:text="@string/mediateka"
-            app:icon="@drawable/ico_media24"
-            style="@style/pageMain_btn">
+            app:icon="@drawable/ico_media24" >
         </Button>
-        <!-- Кнопка 3 Настройки -->
-        <Button android:id="@+id/settings"
+        <!-- КНОПКА 3 НАСТРОЙКИ -->
+        <Button style="@style/page_main_btn"
+            android:id="@+id/settings"
             android:text="@string/settings"
-            app:icon="@drawable/ico_settings24"
-            style="@style/pageMain_btn">
+            app:icon="@drawable/ico_settings24" >
         </Button>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

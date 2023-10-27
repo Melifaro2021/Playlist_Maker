@@ -6,29 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
-        <!-- Строка 1 Настройки -->
-        <LinearLayout
-            style="@style/page_search_string_head">
+    <LinearLayout style="@style/page_search" >
+        <!-- Строка 1 Поиск -->
+        <LinearLayout style="@style/page_search_string_head">
             <!-- Стрелка назад -->
-            <ImageView
-                android:src="@drawable/ico_arr_back"
-                android:contentDescription="@string/arr"
-                style="@style/page_settings_arr_back" />
-            <!-- Заголовок  -->
-            <TextView
-                style="@style/page_settings_txt_settings"
+            <ImageView android:id="@+id/arrBackSearchToMain"
+                style="@style/page_search_arr_back" />
+            <!-- Заголовок -->
+            <TextView style="@style/page_search_string_head"
                 android:text="@string/search" />
         </LinearLayout>
-        <!-- Поисковая строка -->
-        <LinearLayout  style="@style/page_search_search_string" >
-            <ImageView style="@style/page_search_ico"
-                app:srcCompat="@drawable/ico_search24" />
-            <EditText style="@style/page_search_placeholder" />
+        <!-- Поле поиска -->
+        <LinearLayout style="@style/page_search_search_string" >
+            <!-- Обертка -->
+            <FrameLayout android:id="@+id/searchField" style="@style/search_wrapper" >
+                <!-- Иконка Лупы -->
+                <ImageView style="@style/page_search_loupe"/>
+                <!-- Строка ввода текста -->
+                <EditText style="@style/page_search_placeholder" />
+                <!-- Иконка крестика -->
+                <ImageView android:id="@+id/clearIcon" style="@style/page_search_x" />
+            </FrameLayout>
         </LinearLayout>
-</LinearLayout>
-
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

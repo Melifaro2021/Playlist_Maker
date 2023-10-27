@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
                 MediatekaActivity::class.java)
             startActivity(goToMedia)
         }
-        /* Кнопка Настройки 1*/
+        /* Кнопка Настройки */
         val settingsButton = findViewById<Button>(R.id.settings)
         settingsButton.setOnClickListener {
             val goToSettings = Intent(
