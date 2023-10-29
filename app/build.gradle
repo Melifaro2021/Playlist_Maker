@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'ru.makskim.playlist_maker'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "ru.makskim.playlist_maker"
         minSdk 29
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 

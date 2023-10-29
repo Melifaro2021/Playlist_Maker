@@ -10,7 +10,7 @@
         <!-- цвет фона -->
         <item name="android:background">@color/background_settings_page</item>
     </style>
-    <!-- СТРОКА 1 НАСТРОЙКИ  -->
+    <!-- СТРОКА 1 НАСТРОЙКИ -->
     <style name="page_settings_string_head">
         <!-- Размеры -->
         <item name="android:layout_width">match_parent</item>

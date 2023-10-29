@@ -86,6 +86,8 @@
         <item name="android:layout_marginRight">12dp</item>
         <!-- Расположение -->
         <item name="android:layout_gravity">end</item>
+        <!-- Видимость -->
+        <item name="android:visibility">gone</item>
     </style>
     <!-- СТРОКА ВВОДА ТЕКСТА -->
     <style name="page_search_placeholder">
@@ -100,7 +102,7 @@
         <item name="android:hint">@string/search</item>
         <item name="android:textColor">@color/black</item>
         <!-- Настройка строки поиска -->
-        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
         <item name="android:maxLength">15</item>
         <item name="android:inputType">text</item>
     </style>

@@ -76,7 +76,7 @@
         <item name="iconTint">@color/black</item>
         <!-- Закругление уголков кнопки -->
         <item name="cornerRadius">16dp</item>
-        <!-- ??? -->
+        <!-- Эффект "подсветки" при нажатии на элемент интерфейса -->
         <item name="android:foreground">?attr/selectableItemBackground</item>
     </style>
 </resources>
