@@ -10,26 +10,26 @@
         <!-- Строка 1 Поиск -->
         <LinearLayout style="@style/page_search_string_head">
             <!-- Стрелка назад -->
-            <ImageView android:id="@+id/arrBackSearchToMain"
-                style="@style/page_search_arr_back" />
+            <ImageView android:id="@+id/arr_back_search_to_main"
+                style="@style/page_search_arr_back"/>
             <!-- Заголовок -->
             <TextView style="@style/page_search_string_head"
-                android:text="@string/search" />
+                android:text="@string/search"/>
         </LinearLayout>
         <!-- Поле поиска -->
-        <LinearLayout style="@style/page_search_search_string" >
+        <LinearLayout style="@style/page_search_search_string">
             <!-- Обертка -->
-            <FrameLayout android:id="@+id/searchField"
-                style="@style/search_wrapper" >
+            <FrameLayout android:id="@+id/search_field"
+                style="@style/search_wrapper">
                 <!-- Иконка Лупы -->
                 <ImageView style="@style/page_search_loupe"/>
                 <!-- Строка ввода текста -->
                 <EditText android:id="@+id/input_edit_text"
-                    style="@style/page_search_placeholder" />
+                    style="@style/page_search_placeholder"/>
                 <!-- Иконка крестика -->
                 <ImageView
                     android:id="@+id/x_ico"
-                    style="@style/page_search_x" />
+                    style="@style/page_search_x"/>
             </FrameLayout>
         </LinearLayout>
     </LinearLayout>

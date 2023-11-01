@@ -79,8 +79,8 @@
         <item name="android:layout_gravity">start</item>
         <!-- Отступы -->
         <item name="android:paddingLeft">@dimen/pad16dp</item>
-        <item name="android:paddingTop">@dimen/pad21dp</item>
-        <item name="android:paddingBottom">@dimen/pad21dp</item>
+        <item name="android:paddingTop">@dimen/pad20dp</item>
+        <item name="android:paddingBottom">@dimen/pad20dp</item>
     </style>
     <!-- ПЕРЕКЛЮЧАТЕЛЬ ТЕМНАЯ ТЕМА -->
     <style name="page_settings_switch">

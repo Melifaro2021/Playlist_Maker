@@ -12,12 +12,13 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 
 class SearchActivity : AppCompatActivity() {
+    private lateinit var search_query: String
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        val linearLayout = findViewById<FrameLayout>(R.id.searchField)
+        val linearLayout = findViewById<FrameLayout>(R.id.search_field)
         val inputEditText = findViewById<EditText>(R.id.input_edit_text)
         val xIco = findViewById<ImageView>(R.id.x_ico)
 
@@ -34,9 +35,7 @@ class SearchActivity : AppCompatActivity() {
              * что в пределах <code>s</code>:
              * символы <code>count</code>,
              * начинающиеся с <code>start</code>
-             * будут заменены новым текстом длиной <code>after</code>.
-             *
-             * Попытка внести изменения в <code>s</code> из этот обратный вызов.**/
+             * будут заменены новым текстом длиной <code>after</code>. **/
             override fun beforeTextChanged( s: CharSequence?, start: Int, count: Int, after: Int) {
                 // empty
             }
@@ -45,6 +44,7 @@ class SearchActivity : AppCompatActivity() {
              * ĸаĸие символы в теĸсте являются новыми.**/
             override fun onTextChanged( s: CharSequence?, start: Int, before: Int, count: Int)  {
               xIco.visibility = clearButtonVisibility(s)
+                search_query = s.toString() // Обновляем searchQuery при изменении текста
             }
             /** afterTextChanged: внесены изменения, но теĸст доступен для редаĸтирования.
              * Это событие используется, ĸогда нам нужно увидеть и, возможно,
@@ -61,7 +61,7 @@ class SearchActivity : AppCompatActivity() {
 
     /* Стрелка назад, вернуться на предыдущую страницу */
     private fun initBackButton() {
-        val backButton = findViewById<ImageView>(R.id.arrBackSearchToMain)
+        val backButton = findViewById<ImageView>(R.id.arr_back_search_to_main)
         backButton.setOnClickListener {
             finish()
         }
@@ -74,4 +74,31 @@ class SearchActivity : AppCompatActivity() {
             View.VISIBLE
         }
     }
+    /* Хранение данных START */
+    // search_query — это переменная, которую нам нужно сохранить.
+    // KEY — специальный ключ, по которому мы будем сохранять и восстанавливать наше значение.
+    // DEF_SEARCH — это значение по умолчанию для переменной search_query
+
+    // В Kotlin для создания константной переменной мы используем companion object.
+    // Ключ должен быть константным, чтобы мы точно знали, что он не изменится
+    companion object {
+        const val KEY = "search"
+        const val DEF_SEARCH = ""
+    }
+    private var restored_query:String = DEF_SEARCH
+
+    // Переопределяем метод onSaveInstanceState (Сохранение состояния экземпляра),
+    // чтобы сохранить текст из EditText (search_query) в Bundle методом putString
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(KEY, search_query)
+    }
+
+    // Переопределить метод onRestoreInstanceState(Восстановление состояния экземпляра),
+    // чтобы достать данные из Bundle при помощи метода getString и установить их в EditText.
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        restored_query = savedInstanceState.getString(KEY, DEF_SEARCH)
+    }
+    /* Хранение данных END */
 }

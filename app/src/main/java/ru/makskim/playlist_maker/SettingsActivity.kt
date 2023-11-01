@@ -19,8 +19,6 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(arrToMainIntent)
         }
 
-
-
         // Кнопка поделиться приложением
         val shareButton = findViewById<FrameLayout>(R.id.shareButton)
         shareButton.setOnClickListener {
