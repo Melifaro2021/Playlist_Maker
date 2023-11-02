@@ -5,30 +5,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SearchActivity">
-    <LinearLayout style="@style/page_search" >
+    <LinearLayout
+        style="@style/page_search"
+        tools:ignore="MissingConstraints">
         <!-- Строка 1 Поиск -->
-        <LinearLayout style="@style/page_search_string_head">
+        <LinearLayout
+            style="@style/page_search_string_head">
             <!-- Стрелка назад -->
-            <ImageView android:id="@+id/arr_back_search_to_main"
+            <ImageView
+                android:id="@+id/arr_back_search_to_main"
                 style="@style/page_search_arr_back"/>
             <!-- Заголовок -->
-            <TextView style="@style/page_search_string_head"
+            <TextView
+                style="@style/page_search_string_head"
                 android:text="@string/search"/>
         </LinearLayout>
         <!-- Поле поиска -->
-        <LinearLayout style="@style/page_search_search_string">
+        <LinearLayout
+            style="@style/page_search_search_string">
             <!-- Обертка -->
-            <FrameLayout android:id="@+id/search_field"
+            <FrameLayout
+                android:id="@+id/search_field"
                 style="@style/search_wrapper">
                 <!-- Иконка Лупы -->
-                <ImageView style="@style/page_search_loupe"/>
+                <ImageView
+                    style="@style/page_search_loupe"/>
                 <!-- Строка ввода текста -->
-                <EditText android:id="@+id/input_edit_text"
+                <EditText
+                    android:id="@+id/input_edit_text"
                     style="@style/page_search_placeholder"/>
                 <!-- Иконка крестика -->
                 <ImageView
-                    android:id="@+id/x_ico"
+                    android:id="@+id/clear_search_field_icon"
                     style="@style/page_search_x"/>
             </FrameLayout>
         </LinearLayout>

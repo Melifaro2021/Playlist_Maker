@@ -3,10 +3,10 @@
     <!-- по умолчанию - Theme.Material3.DayNight.NoActionBar-->
     <style name="Base.Theme.Playlist_Maker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!--  Цветовая схема 1 -->
-        <!-- 1. Основной цвет @color/-->
-        <item name="colorPrimary">@color/blue</item>
+        <!-- 1. Основной цвет @color/
+        <item name="colorPrimary">@color/blue</item>-->
         <!-- 2. это самые светлые или тёмные оттенки цветов бренда -->
-        <item name="colorPrimaryVariant">@color/blueDark</item>
+        <item name="colorPrimaryVariant">@color/blue_dark</item>
         <!-- 3. цвета элементов переднего плана -->
         <item name="colorOnPrimary">@color/black</item>
 

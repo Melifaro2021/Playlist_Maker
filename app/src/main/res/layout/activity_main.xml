@@ -6,28 +6,34 @@
     style="@style/page_main_res"
     tools:context=".MainActivity">
     <!-- ГЛАВНАЯ СТРАНИЦА -->
-    <LinearLayout style="@style/page_main"
+    <LinearLayout
+        style="@style/page_main"
         tools:ignore="MissingConstraints">
-        <TextView style="@style/page_main_head"
+        <TextView
+            style="@style/page_main_head"
             android:text="@string/playlist_maker"/>
     </LinearLayout>
     <!-- БОКС ДЛЯ ТРЕХ КНОПОК -->
-    <LinearLayout style="@style/page_main_box_for_btn"
+    <LinearLayout
+        style="@style/page_main_box_for_btn"
         tools:ignore="MissingConstraints">
         <!-- КНОПКА 1 ПОИСК -->
-        <Button style="@style/page_main_btn"
+        <Button
+            style="@style/page_main_btn"
             android:id="@+id/search"
             android:text="@string/search"
             app:icon="@drawable/ico_search24" >
         </Button>
         <!-- КНОПКА 2 МЕДИАТЕКА -->
-        <Button style="@style/page_main_btn"
+        <Button
+            style="@style/page_main_btn"
             android:id="@+id/media"
             android:text="@string/mediateka"
             app:icon="@drawable/ico_media24" >
         </Button>
         <!-- КНОПКА 3 НАСТРОЙКИ -->
-        <Button style="@style/page_main_btn"
+        <Button
+            style="@style/page_main_btn"
             android:id="@+id/settings"
             android:text="@string/settings"
             app:icon="@drawable/ico_settings24" >

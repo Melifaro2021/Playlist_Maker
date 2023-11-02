@@ -14,7 +14,7 @@
         <!-- Расположение -->
         <item name="android:orientation">vertical</item>
         <!-- Цвет фона -->
-        <item name="android:background">@color/background_color</item>
+        <item name="android:background">@color/main_page_background</item>
         <!-- Отступы -->
         <item name="android:paddingTop">10dp</item>
         <item name="android:paddingRight">@dimen/pad12dp</item>
@@ -58,7 +58,7 @@
         <item name="android:layout_gravity">center</item>
         <item name="iconGravity">textStart</item>
         <!-- Цвет шрифта -->
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black_soft</item>
         <!-- Размер шрифта -->
         <item name="android:textSize">@dimen/head26</item>
         <!-- Начертание шрифта -->

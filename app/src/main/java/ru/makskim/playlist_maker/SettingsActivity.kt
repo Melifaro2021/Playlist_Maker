@@ -15,8 +15,7 @@ class SettingsActivity : AppCompatActivity() {
         // Стрелка назад переход с настроек на главную
         val arrToMain = findViewById<ImageView>(R.id.arrBack)
         arrToMain.setOnClickListener {
-            val arrToMainIntent = Intent(this, MainActivity::class.java)
-            startActivity(arrToMainIntent)
+            finish()
         }
 
         // Кнопка поделиться приложением
@@ -37,9 +36,9 @@ class SettingsActivity : AppCompatActivity() {
             val shareIntent = Intent(Intent.ACTION_SENDTO)
             val support_text = resources.getString(R.string.text_mail)
             val support_theme = resources.getString(R.string.theme_mail)
-            shareIntent.data = Uri.parse("mailto:")
+            shareIntent.data = Uri.parse("@string/email")
 
-            shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("melifaro00@yandex.ru"))
+            shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("@string/email_name"))
 
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, support_theme)
             shareIntent.putExtra(Intent.EXTRA_TEXT, support_text)

@@ -7,59 +7,78 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
     <!-- Общий контейнер -->
-    <LinearLayout style="@style/page_settings"  >
+    <LinearLayout
+        style="@style/page_settings"
+        tools:ignore="MissingConstraints">
         <!-- СТРОКА 1 НАСТРОЙКИ -->
-        <LinearLayout style="@style/page_settings_string_head">
+        <LinearLayout
+            style="@style/page_settings_string_head">
             <!-- Стрелка назад -->
-            <ImageView style="@style/page_settings_arr_back"
+            <ImageView
+                style="@style/page_settings_arr_back"
                 android:id="@+id/arrBack"/>
             <!-- Заголовок настройки -->
-            <TextView style="@style/page_settings_txt_settings"/>
+            <TextView
+                style="@style/page_settings_txt_settings"/>
         </LinearLayout>
         <!-- СТРОКА 2 ТЕМНАЯ ТЕМА -->
-        <LinearLayout style="@style/page_settings_str_night_theme">
+        <LinearLayout
+            style="@style/page_settings_str_night_theme">
             <!-- Заголовок -->
-            <TextView style="@style/page_settings_txt_night_theme"/>
+            <TextView
+                style="@style/page_settings_txt_night_theme"/>
             <!-- Переключатель -->
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchcompat"
                 style="@style/page_settings_switch" />
         </LinearLayout>
         <!-- СТРОКА 3 ПОДЕЛИТЬСЯ ПРИЛОЖЕНИЕМ -->
-        <LinearLayout style="@style/page_settings_string_simple">
-            <FrameLayout style="@style/page_settings_string_frame"
+        <LinearLayout
+            style="@style/page_settings_string_simple">
+            <FrameLayout
+                style="@style/page_settings_string_frame"
                 android:id="@+id/shareButton" >
                 <!-- Заголовок -->
-                <TextView style="@style/page_settings_string_text"
+                <TextView
+                    style="@style/page_settings_string_text"
                     android:text="@string/share_app" />
                 <!-- Иконка -->
-                <ImageView style="@style/page_settings_string_ico"
+                <ImageView
+                    style="@style/page_settings_string_ico"
                     android:contentDescription="@string/share_app"
                     android:src="@drawable/ico_share24" />
             </FrameLayout>
         </LinearLayout>
         <!-- СТРОКА 4 НАПИСАТЬ В ТЕХПОДДЕРЖКУ -->
-        <LinearLayout style="@style/page_settings_string_simple">
-            <FrameLayout style="@style/page_settings_string_frame"
+        <LinearLayout
+            style="@style/page_settings_string_simple">
+            <FrameLayout
+                style="@style/page_settings_string_frame"
                 android:id="@+id/btn_support" >
                 <!-- Заголовок -->
-                <TextView style="@style/page_settings_string_text"
+                <TextView
+                    style="@style/page_settings_string_text"
                     android:text="@string/write_to_support" />
                 <!-- Иконка -->
-                <ImageView style="@style/page_settings_string_ico"
+                <ImageView
+                    style="@style/page_settings_string_ico"
                     android:contentDescription="@string/terms_of_use"
                     android:src="@drawable/ico_support24" />
             </FrameLayout>
         </LinearLayout>
         <!-- СТРОКА 5 ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ -->
-        <LinearLayout style="@style/page_settings_string_simple">
-            <FrameLayout android:id="@+id/btn_terms"
+        <LinearLayout
+            style="@style/page_settings_string_simple">
+            <FrameLayout
+                android:id="@+id/btn_terms"
                 style="@style/page_settings_string_frame">
                 <!-- Заголовок -->
-                <TextView style="@style/page_settings_string_text"
+                <TextView
+                    style="@style/page_settings_string_text"
                     android:text="@string/terms_of_use" />
                 <!-- Иконка  -->
-                <ImageView style="@style/page_settings_string_ico"
+                <ImageView
+                    style="@style/page_settings_string_ico"
                     android:contentDescription="@string/arr"
                     android:src="@drawable/ico_arr_forward24" />
             </FrameLayout>

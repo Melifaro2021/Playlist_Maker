@@ -1,14 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Night.Theme.Playlist_Maker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/gray</item>
-        <item name="colorPrimaryVariant">@color/blackSoft</item>
+        <!--  Цветовая схема 1 -->
+        <!-- 1. Основной цвет @color/
+        <item name="colorPrimary">@color/gray</item>-->
+        <!-- 2. это самые светлые или тёмные оттенки цветов бренда -->
+        <item name="colorPrimaryVariant">@color/black_soft</item>
+        <!-- 3. цвета элементов переднего плана -->
         <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color.-->
+
+        <!-- Цветовая схема 2 -->
+        <!-- 1. Основной цвет -->
         <item name="colorSecondary">@color/gray</item>
+        <!-- 2. это самые светлые или тёмные оттенки цветов бренда -->
         <item name="colorSecondaryVariant">@color/pink</item>
+        <!-- 3. цвета элементов переднего плана -->
         <item name="colorOnSecondary">@color/black</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
