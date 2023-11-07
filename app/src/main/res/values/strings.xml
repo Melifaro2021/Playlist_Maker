@@ -20,4 +20,8 @@
     <string name="text_mail">«Спасибо разработчикам и разработчицам за крутое приложение!»</string>
     <string name="terms_article" translatable="false">https://yandex.ru/legal/practicum_offer/</string>
     <!-- СТРАНИЦА НАСТРОЙКИ END -->
+    <!-- СТРАНИЦА ПОИСКА SRART -->
+    <string name="loupe">Лупа</string>
+    <string name="delete_button">Крестик</string>
+    <!-- СТРАНИЦА ПОИСКА END -->
 </resources>

@@ -5,7 +5,6 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
-
     </style>
     <!-- СТРЕЛКА НАЗАД -->
     <style name="page_search_arr_back">
@@ -38,13 +37,13 @@
     </style>
     <!-- ПОЛЕ ПОИСКА, не путать с вводом строки -->
     <style name="page_search_search_string">
+        <!-- Размеры -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <!-- Фон -->
         <item name="android:background">@drawable/search_background</item>
         <!-- Ориентация -->
         <item name="android:orientation">horizontal</item>
-        <!-- Размеры -->
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
         <!-- Отступы -->
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
@@ -64,14 +63,15 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <!-- Расположение -->
-        <item name="android:layout_gravity">start</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toStartOf">@id/inputEditText</item>
         <!-- Цвет иконки -->
         <item name="android:tint">@color/search_page_ico</item>
         <!-- Отступы -->
-        <item name="android:layout_marginTop">13dp</item>
-        <item name="android:layout_marginBottom">10dp</item>
         <item name="android:layout_marginLeft">12dp</item>
-        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginRight">12dp</item>
     </style>
     <!-- ИКОНКА КРЕСТИКА  -->
     <style name="page_search_x">
@@ -81,29 +81,34 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <!-- Расположение -->
-        <item name="android:layout_gravity">end</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
         <!-- Цвет иконки -->
         <item name="android:tint">@color/search_page_ico</item>
         <!-- Отступы -->
-        <item name="android:layout_marginTop">13dp</item>
-        <item name="android:layout_marginBottom">10dp</item>
-        <item name="android:layout_marginLeft">12dp</item>
-        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:paddingTop">@dimen/pad12dp</item>
+        <item name="android:paddingBottom">@dimen/pad12dp</item>
+        <item name="android:paddingLeft">@dimen/pad12dp</item>
+        <item name="android:paddingRight">@dimen/pad12dp</item>
         <!-- Видимость -->
-        <item name="android:visibility">gone</item>
+        <!--item name="android:visibility">gone</item-->
     </style>
     <!-- СТРОКА ВВОДА ТЕКСТА -->
     <style name="page_search_placeholder">
         <!-- Размеры -->
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <!-- отступ от иконки лупы -->
-        <item name="android:layout_marginLeft">40dp</item>
-        <!-- отступ от иконки крестика -->
-        <item name="android:layout_marginRight">40dp</item>
+        <!-- Расположение -->
+        <item name="layout_constraintStart_toEndOf">@+id/ico_search_loupe</item>
+        <item name="layout_constraintEnd_toStartOf">@+id/clearSearchFieldIcon</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
         <!-- подсказка placeholder -->
         <item name="android:hint">@string/search</item>
+        <item name="android:background">@null</item>
         <item name="android:textColorHint">@color/search_page_txt_input</item>
+        <item name="android:autofillHints">@string/search</item>
         <!-- Настройка строки поиска -->
         <item name="android:maxLines">1</item>
         <item name="android:maxLength">15</item>

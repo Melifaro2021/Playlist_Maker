@@ -16,31 +16,31 @@
             <!-- Стрелка назад -->
             <ImageView
                 android:id="@+id/arr_back_search_to_main"
-                style="@style/page_search_arr_back"/>
+                style="@style/page_search_arr_back"
+                android:contentDescription="@string/arr" />
             <!-- Заголовок -->
             <TextView
                 style="@style/page_search_string_head"
                 android:text="@string/search"/>
         </LinearLayout>
         <!-- Поле поиска -->
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchField"
+            tools:context=".SearchActivity"
             style="@style/page_search_search_string">
-            <!-- Обертка -->
-            <FrameLayout
-                android:id="@+id/search_field"
-                style="@style/search_wrapper">
-                <!-- Иконка Лупы -->
-                <ImageView
-                    style="@style/page_search_loupe"/>
-                <!-- Строка ввода текста -->
-                <EditText
-                    android:id="@+id/input_edit_text"
-                    style="@style/page_search_placeholder"/>
-                <!-- Иконка крестика -->
-                <ImageView
-                    android:id="@+id/clear_search_field_icon"
-                    style="@style/page_search_x"/>
-            </FrameLayout>
-        </LinearLayout>
+            <!-- Иконка Лупы -->
+            <ImageView
+                style="@style/page_search_loupe"
+                android:id="@+id/ico_search_loupe"
+                android:contentDescription="@string/loupe" />
+            <EditText
+                style="@style/page_search_placeholder"
+                android:id="@+id/inputEditText"
+                tools:ignore="LabelFor" />
+            <ImageView
+                style="@style/page_search_x"
+                android:id="@+id/clearSearchFieldIcon"
+                android:contentDescription="@string/delete_button" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
