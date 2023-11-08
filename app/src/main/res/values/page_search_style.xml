@@ -39,7 +39,7 @@
     <style name="page_search_search_string">
         <!-- Размеры -->
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
         <!-- Фон -->
         <item name="android:background">@drawable/search_background</item>
         <!-- Ориентация -->
@@ -49,11 +49,6 @@
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
-    </style>
-    <!-- ОБЕРТКА -->
-    <style name="search_wrapper">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
     </style>
     <!-- ИКОНКА ЛУПЫ -->
     <style name="page_search_loupe">
@@ -70,8 +65,10 @@
         <!-- Цвет иконки -->
         <item name="android:tint">@color/search_page_ico</item>
         <!-- Отступы -->
-        <item name="android:layout_marginLeft">12dp</item>
-        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:paddingTop">@dimen/pad12dp</item>
+        <item name="android:paddingBottom">@dimen/pad12dp</item>
+        <item name="android:paddingLeft">@dimen/pad12dp</item>
+        <item name="android:paddingRight">@dimen/pad12dp</item>
     </style>
     <!-- ИКОНКА КРЕСТИКА  -->
     <style name="page_search_x">
@@ -86,9 +83,7 @@
         <item name="layout_constraintBottom_toBottomOf">parent</item>
         <!-- Цвет иконки -->
         <item name="android:tint">@color/search_page_ico</item>
-        <!-- Отступы -->
-        <item name="android:paddingTop">@dimen/pad12dp</item>
-        <item name="android:paddingBottom">@dimen/pad12dp</item>
+        <!-- Отступы-->
         <item name="android:paddingLeft">@dimen/pad12dp</item>
         <item name="android:paddingRight">@dimen/pad12dp</item>
         <!-- Видимость -->
