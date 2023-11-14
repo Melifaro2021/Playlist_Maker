@@ -42,5 +42,12 @@
                 android:id="@+id/clearSearchFieldIcon"
                 android:contentDescription="@string/delete_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_songs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/view_song"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

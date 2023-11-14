@@ -21,7 +21,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@color/gray"/>
+            tools:background="@color/gray"/>
         <!-- Описание песни -->
         <LinearLayout
             android:layout_width="0dp"
@@ -42,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/text18"
                 android:text="Yesterday(Remastered 2009) Yesterday(Remastered 2009) Yesterday(Remastered 2009)"
+                android:ellipsize="end"
                 android:maxLines="1" />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -55,7 +56,8 @@
 
                     android:gravity="center_vertical"
                     android:maxWidth="240dp"
-                    android:text="The Beatles"
+                    android:ellipsize="end"
+                    android:text="The Beatles The Beatles The Beatles The Beatles The Beatles"
 
                     android:textColor="#AEAFB4"
                     android:textSize="@dimen/text12"

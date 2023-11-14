@@ -16,12 +16,12 @@ class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         songName.text = item.trackName // Имя исполнителя
         artistName.text = item.artistName // Название композиции
         songTime.text = item.trackTime // Продолжительность трека
-
         // Ссылка на изображение обложки
         Glide.with(itemView.context)
             .load(item.artworkUrl100)
             .transform(RoundedCorners(8))
             .fitCenter()
+            .placeholder(R.drawable.filter_24)
             .error(R.drawable.ico_arr_back)
             .into(icoSong)
     }
