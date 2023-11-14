@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Блок песни android:background="@color/search_background" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+
+        tools:ignore="MissingConstraints">
+        <!-- Картинка для песни -->
+        <ImageView
+            android:id="@+id/ico_song"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/gray"/>
+        <!-- Описание песни -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+
+            android:orientation="vertical" >
+            <!-- Название песни -->
+            <TextView
+                android:id="@+id/song_name"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text18"
+                android:text="Yesterday(Remastered 2009) Yesterday(Remastered 2009) Yesterday(Remastered 2009)"
+                android:maxLines="1" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <!-- Исполнитель песни -->
+                <TextView
+                    android:id="@+id/artist_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:maxWidth="240dp"
+                    android:text="The Beatles"
+
+                    android:textColor="#AEAFB4"
+                    android:textSize="@dimen/text12"
+
+                    android:maxLines="1"/>
+                <!-- Точка, разделитель -->
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/ic"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:clipToOutline="true"
+                    />
+                <!-- Длительность песни -->
+                <TextView
+                    android:id="@+id/song_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AEAFB4"
+                    android:textSize="@dimen/text12"
+
+                    android:text="2:55"
+                    android:maxLines="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Играть песню-->
+        <ImageView
+            android:id="@+id/track_arrow"
+
+            android:contentDescription="@string/arr"
+            android:src="@drawable/ico_arr_forward24"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="19dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+
+            app:iconTint="@color/gray"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
