@@ -4,18 +4,22 @@
     <color name="main_page_background">#3772E7</color><!-- Фон -->
     <!-- ГЛАВНАЯ СТРАНИЦА END -->
 
-    <!-- СТРАНИЦА НАСТРОЕК START settings_page_txt_search_line #AEAFB4-->
+    <!-- СТРАНИЦА НАСТРОЕК START -->
     <color name="settings_page_background">#FFFFFFFF</color><!-- Фон -->
     <color name="settings_page_txt">#1A1B22</color> <!-- Текст  -->
     <color name="settings_page_ico">#1A1B22</color><!-- Иконки -->
     <!-- СТРАНИЦА НАСТРОЕК END -->
 
     <!-- СТРАНИЦА ПОИСКА START -->
+    <color name="search_page_background">#FFFFFFFF</color><!-- Фон -->
     <color name="search_page_ico_arr_back">#1A1B22</color><!-- Стрелка назад -->
     <color name="search_page_head">#1A1B22</color><!-- Цвет заголовка  -->
     <color name="search_page_txt_input">#AEAFB4</color><!-- Подсказка в строке поиска -->
     <color name="search_background">#E6E8EB</color><!-- фон строки поиска-->
     <color name="search_page_ico">#AEAFB4</color><!-- иконки в строке поиска: Лупа, крестик, настройки, микрофон -->
+    <color name="search_page_song_name">#000000</color><!-- Название песни -->
+    <color name="search_page_song_info">#AEAFB4</color><!-- Исполнитель, длительность песни -->
+    <color name="search_page_ico_play">#AEAFB4</color><!-- Играть песню -->
     <!-- СТРАНИЦА ПОИСКА END -->
 
     <!-- Статичные цвета одинаковые для темной и светлой темы -->

@@ -36,7 +36,8 @@
             <EditText
                 style="@style/page_search_placeholder"
                 android:id="@+id/inputEditText"
-                tools:ignore="LabelFor" />
+                tools:ignore="LabelFor"
+                android:autofillHints="@string/song_search" />
             <ImageView
                 style="@style/page_search_x"
                 android:id="@+id/clearSearchFieldIcon"
