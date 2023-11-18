@@ -12,6 +12,7 @@
         <!-- Картинка для песни -->
         <ImageView
             android:id="@+id/ico_song"
+            android:src="@drawable/placeholder"
             style="@style/view_song_img"
             android:contentDescription="@string/song_foto" />
         <!-- Описание песни -->

@@ -34,20 +34,20 @@ class SettingsActivity : AppCompatActivity() {
         val supportButton = findViewById<FrameLayout>(R.id.btn_support)
         supportButton.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_SENDTO)
-            val support_text = resources.getString(R.string.text_mail)
-            val support_theme = resources.getString(R.string.theme_mail)
+            val supportText = resources.getString(R.string.text_mail)
+            val supportTheme = resources.getString(R.string.theme_mail)
             shareIntent.data = Uri.parse("@string/email")
 
             shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("@string/email_name"))
 
-            shareIntent.putExtra(Intent.EXTRA_SUBJECT, support_theme)
-            shareIntent.putExtra(Intent.EXTRA_TEXT, support_text)
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, supportTheme)
+            shareIntent.putExtra(Intent.EXTRA_TEXT, supportText)
             startActivity(shareIntent)
         }
         // Кнопка Пользовательское соглашение
-        val terms_button = findViewById<FrameLayout>(R.id.btn_terms)
+        val termsButton = findViewById<FrameLayout>(R.id.btn_terms)
 
-        terms_button.setOnClickListener {
+        termsButton.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_VIEW)
             val termsOfUseArticle = resources.getString(R.string.terms_article)
             shareIntent.data = Uri.parse(termsOfUseArticle)

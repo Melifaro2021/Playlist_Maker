@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.makskim.playlist_maker.MockPlaylist.mockPlaylist
 
 class SearchActivity : AppCompatActivity() {
-    private lateinit var inputEditText: EditText // 1. Поле поиска
+    private lateinit var inputEditText: EditText // 1. Строка ввода текста в поле поиска
     private lateinit var searchQuery: String // 2. Поле ввода текста
-    private lateinit var searchField: ConstraintLayout // 3. Иконка крестика
+    private lateinit var searchField: ConstraintLayout // 3. Поле поиска
     private lateinit var rvSearchSongs: RecyclerView // 4. Определим RecyclerView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -104,4 +104,3 @@ class SearchActivity : AppCompatActivity() {
     }
     /* Хранение данных END */
 }
-

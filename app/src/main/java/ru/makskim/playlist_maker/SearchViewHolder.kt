@@ -19,9 +19,9 @@ class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // Ссылка на изображение обложки
         Glide.with(itemView.context)
             .load(item.artworkUrl100)
-            .transform(RoundedCorners(8))
+            .transform(RoundedCorners(2))
             .fitCenter()
-            .placeholder(R.drawable.filter_24)
+            .placeholder(R.drawable.placeholder)
             .error(R.drawable.ico_arr_back)
             .into(icoSong)
     }

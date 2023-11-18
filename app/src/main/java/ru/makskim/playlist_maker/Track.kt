@@ -1,4 +1,5 @@
 package ru.makskim.playlist_maker
+
 data class Track (
     val trackName: String, // Название композиции
     val artistName: String, // Имя исполнителя
