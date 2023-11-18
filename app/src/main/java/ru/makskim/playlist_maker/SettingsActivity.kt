@@ -36,9 +36,9 @@ class SettingsActivity : AppCompatActivity() {
             val shareIntent = Intent(Intent.ACTION_SENDTO)
             val supportText = resources.getString(R.string.text_mail)
             val supportTheme = resources.getString(R.string.theme_mail)
-            shareIntent.data = Uri.parse("@string/email")
+            shareIntent.data = Uri.parse("mailto:")
 
-            shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("@string/email_name"))
+            shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(R.string.email_name))
 
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, supportTheme)
             shareIntent.putExtra(Intent.EXTRA_TEXT, supportText)
