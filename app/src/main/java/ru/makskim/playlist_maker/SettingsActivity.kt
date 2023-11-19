@@ -49,8 +49,8 @@ class SettingsActivity : AppCompatActivity() {
 
         termsButton.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_VIEW)
-            val termsOfUseArticle = resources.getString(R.string.terms_article)
-            shareIntent.data = Uri.parse(termsOfUseArticle)
+            val termsArticle = resources.getString(R.string.terms_article)
+            shareIntent.data = Uri.parse(termsArticle)
             startActivity(shareIntent)
         }
     }
