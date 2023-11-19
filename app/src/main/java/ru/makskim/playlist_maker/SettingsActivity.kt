@@ -1,9 +1,11 @@
 package ru.makskim.playlist_maker
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.FrameLayout
 import android.widget.ImageView
 
@@ -44,11 +46,17 @@ class SettingsActivity : AppCompatActivity() {
             shareIntent.putExtra(Intent.EXTRA_TEXT, supportText)
             startActivity(shareIntent)
         }
+        val shareIntent = Intent(Intent.ACTION_VIEW)
+        if (shareIntent.resolveActivity(packageManager) != null ){
+            startActivity(shareIntent)
+        } else {
+            Log.d(TAG, "No Intent available to handle action");
+        }
+
         // Кнопка Пользовательское соглашение
         val termsButton = findViewById<FrameLayout>(R.id.btn_terms)
 
         termsButton.setOnClickListener {
-            val shareIntent = Intent(Intent.ACTION_VIEW)
             val termsArticle = resources.getString(R.string.terms_article)
             shareIntent.data = Uri.parse(termsArticle)
             startActivity(shareIntent)
