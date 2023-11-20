@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/page_main_res"
-    tools:context=".MainActivity">
+    tools:context="ru.makskim.playlistMaker.MainActivity">
     <!-- ГЛАВНАЯ СТРАНИЦА -->
     <LinearLayout
         style="@style/page_main"

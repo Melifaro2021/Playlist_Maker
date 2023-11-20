@@ -1,4 +1,4 @@
-package ru.makskim.playlist_maker
+package ru.makskim.playlistMaker
 
 data class Track (
     val trackName: String, // Название композиции

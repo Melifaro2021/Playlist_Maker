@@ -1,19 +1,18 @@
-package ru.makskim.playlist_maker
+package ru.makskim.playlistMaker
 
 import android.annotation.SuppressLint
-
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.ImageView
-import android.view.View
-import android.widget.EditText
-import androidx.constraintlayout.widget.ConstraintLayout
 import android.content.Context
-import android.view.inputmethod.InputMethodManager
-import android.text.TextWatcher
+import android.os.Bundle
 import android.text.Editable
+import android.text.TextWatcher
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import ru.makskim.playlist_maker.MockPlaylist.mockPlaylist
+import ru.makskim.playlistMaker.MockPlaylist.mockPlaylist
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var inputEditText: EditText // 1. Строка ввода текста в поле поиска
@@ -34,7 +33,7 @@ class SearchActivity : AppCompatActivity() {
         rvSearchSongs.adapter = searchAdapter
 
         if (savedInstanceState != null){
-            inputEditText.setText(savedInstanceState.getString(KEY,DEF_SEARCH) )
+            inputEditText.setText(savedInstanceState.getString(KEY, DEF_SEARCH) )
         }
 
         initBackButton() // Стрелка назад, вызов

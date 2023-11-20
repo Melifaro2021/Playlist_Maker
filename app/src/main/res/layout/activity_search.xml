@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SearchActivity">
+    tools:context="ru.makskim.playlistMaker.SearchActivity">
     <LinearLayout
         style="@style/page_search"
         tools:ignore="MissingConstraints">
@@ -26,7 +26,7 @@
         <!-- Поле поиска -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/searchField"
-            tools:context=".SearchActivity"
+            tools:context="ru.makskim.playlistMaker.SearchActivity"
             style="@style/page_search_search_string">
             <!-- Иконка Лупы -->
             <ImageView

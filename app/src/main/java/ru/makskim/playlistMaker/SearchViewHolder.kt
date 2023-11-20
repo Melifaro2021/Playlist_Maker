@@ -1,4 +1,4 @@
-package ru.makskim.playlist_maker
+package ru.makskim.playlistMaker
 
 import android.view.View
 import android.widget.ImageView
@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+
 class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val songName = itemView.findViewById<TextView>(R.id.song_name) // Название композиции
     private val artistName = itemView.findViewById<TextView>(R.id.artist_name) // Имя исполнителя

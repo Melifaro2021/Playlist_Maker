@@ -1,4 +1,4 @@
-package ru.makskim.playlist_maker
+package ru.makskim.playlistMaker
 
 object MockPlaylist {
     val mockPlaylist = listOf(

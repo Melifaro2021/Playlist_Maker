@@ -13,16 +13,16 @@
         android:theme="@style/Base.Theme.Playlist_Maker"
         tools:targetApi="34">
         <activity
-            android:name=".SearchActivity"
+            android:name="ru.makskim.playlistMaker.SearchActivity"
             android:exported="true" />
         <activity
-            android:name=".MediatekaActivity"
+            android:name="ru.makskim.playlistMaker.MediatekaActivity"
             android:exported="true" />
         <activity
-            android:name=".SettingsActivity"
+            android:name="ru.makskim.playlistMaker.SettingsActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="ru.makskim.playlistMaker.MainActivity"
             android:exported="true"
             android:theme="@style/Base.Theme.Playlist_Maker">
             <intent-filter>

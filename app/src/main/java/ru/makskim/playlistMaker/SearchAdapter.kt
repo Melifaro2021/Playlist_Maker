@@ -1,4 +1,4 @@
-package ru.makskim.playlist_maker
+package ru.makskim.playlistMaker
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

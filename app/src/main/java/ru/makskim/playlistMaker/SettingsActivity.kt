@@ -1,13 +1,14 @@
-package ru.makskim.playlist_maker
+package ru.makskim.playlistMaker
 
-import android.content.ContentValues.TAG
+import android.content.ContentValues
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +39,7 @@ class SettingsActivity : AppCompatActivity() {
             val shareIntent = Intent(Intent.ACTION_SENDTO)
             val supportText = resources.getString(R.string.text_mail)
             val supportTheme = resources.getString(R.string.theme_mail)
-            shareIntent.data = Uri.parse("mailto:")
+            shareIntent.data = Uri.parse("mailto:melifaro00@yandex.ru")
 
             shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(R.string.email_name))
 
@@ -46,20 +47,27 @@ class SettingsActivity : AppCompatActivity() {
             shareIntent.putExtra(Intent.EXTRA_TEXT, supportText)
             startActivity(shareIntent)
         }
-        val shareIntent = Intent(Intent.ACTION_VIEW)
-        if (shareIntent.resolveActivity(packageManager) != null ){
-            startActivity(shareIntent)
-        } else {
-            Log.d(TAG, "No Intent available to handle action");
-        }
 
         // Кнопка Пользовательское соглашение
         val termsButton = findViewById<FrameLayout>(R.id.btn_terms)
-
         termsButton.setOnClickListener {
-            val termsArticle = resources.getString(R.string.terms_article)
-            shareIntent.data = Uri.parse(termsArticle)
-            startActivity(shareIntent)
+            val shareIntent = Intent(Intent.ACTION_VIEW, Uri.parse(resources.getString(R.string.terms_article)))
+            try{
+                startActivity(shareIntent)
+            } catch (e:Exception){
+                Log.d(ContentValues.TAG, "No Intent available to handle action")
+
+                // Сообщение для пользователя
+                Toast.makeText(this, "Не найдено приложение для открытия ссылки", Toast.LENGTH_SHORT).show()
+
+                /*val webUri = Uri.parse("https://play.google.com/store/apps/details?id=com.android.chrome")
+                val webIntent = Intent(Intent.ACTION_VIEW, webUri)
+                startActivity(webIntent)*/
+            }
+            /*if (shareIntent.resolveActivity(packageManager) != null ){
+                startActivity(shareIntent)
+            } else {
+            }*/
         }
     }
 }

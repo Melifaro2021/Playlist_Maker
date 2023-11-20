@@ -1,6 +1,6 @@
 <resources>
     <!-- ГЛАВНАЯ СТРАНИЦА START -->
-    <string name="app_name">Playlist_Maker</string>
+    <string name="app_name">playlistMaker</string>
     <string name="search">Поиск</string>
     <string name="mediateka">Медиатека</string>
     <string name="settings">Настройки</string>
