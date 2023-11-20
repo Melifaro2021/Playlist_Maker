@@ -31,8 +31,9 @@
             <!-- Переключатель -->
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchcompat"
-                style="@style/page_settings_switch"
-                android:thumbTint="#0000FF"  />
+                app:thumbTint="@color/switchThumb"
+                app:trackTint="@color/switchThumbLine"
+                style="@style/page_settings_switch"  />
         </LinearLayout>
         <!-- СТРОКА 3 ПОДЕЛИТЬСЯ ПРИЛОЖЕНИЕМ -->
         <LinearLayout

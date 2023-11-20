@@ -56,18 +56,9 @@ class SettingsActivity : AppCompatActivity() {
                 startActivity(shareIntent)
             } catch (e:Exception){
                 Log.d(ContentValues.TAG, "No Intent available to handle action")
-
                 // Сообщение для пользователя
                 Toast.makeText(this, "Не найдено приложение для открытия ссылки", Toast.LENGTH_SHORT).show()
-
-                /*val webUri = Uri.parse("https://play.google.com/store/apps/details?id=com.android.chrome")
-                val webIntent = Intent(Intent.ACTION_VIEW, webUri)
-                startActivity(webIntent)*/
             }
-            /*if (shareIntent.resolveActivity(packageManager) != null ){
-                startActivity(shareIntent)
-            } else {
-            }*/
         }
     }
 }
