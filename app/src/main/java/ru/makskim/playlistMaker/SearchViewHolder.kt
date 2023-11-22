@@ -23,7 +23,6 @@ class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             .transform(RoundedCorners(2))
             .fitCenter()
             .placeholder(R.drawable.placeholder)
-            .error(R.drawable.ico_arr_back)
             .into(icoSong)
     }
 }

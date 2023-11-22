@@ -12,7 +12,8 @@
         tools:ignore="MissingConstraints">
         <!-- Строка 1 Поиск -->
         <LinearLayout
-            style="@style/page_search_string_head">
+            style="@style/page_search_string_head"
+            >
             <!-- Стрелка назад -->
             <ImageView
                 android:id="@+id/arr_back_search_to_main"
@@ -26,6 +27,7 @@
         <!-- Поле поиска -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/searchField"
+            android:layout_marginBottom="15dp"
             tools:context="ru.makskim.playlistMaker.SearchActivity"
             style="@style/page_search_search_string">
             <!-- Иконка Лупы -->
@@ -43,12 +45,12 @@
                 android:id="@+id/clearSearchFieldIcon"
                 android:contentDescription="@string/delete_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_search_songs"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/view_song"
-            />
+            tools:listitem="@layout/view_song" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

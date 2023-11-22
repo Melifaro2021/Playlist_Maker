@@ -89,7 +89,6 @@
         <item name="android:layout_height">match_parent</item>
         <!-- Цвет иконки -->
         <item name="android:tint">@color/settings_page_ico</item>
-        <item name="android:thumbTint">@color/switchThumbColor</item>
         <!-- Расположение -->
         <item name="android:layout_gravity">end</item>
         <!-- Отступы -->
