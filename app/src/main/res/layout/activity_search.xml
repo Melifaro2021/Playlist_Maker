@@ -27,7 +27,6 @@
         <!-- Поле поиска -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/searchField"
-            android:layout_marginBottom="15dp"
             tools:context="ru.makskim.playlistMaker.SearchActivity"
             style="@style/page_search_search_string">
             <!-- Иконка Лупы -->
