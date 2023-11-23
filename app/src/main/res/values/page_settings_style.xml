@@ -83,7 +83,7 @@
         <item name="android:paddingBottom">@dimen/pad20dp</item>
     </style>
     <!-- ПЕРЕКЛЮЧАТЕЛЬ ТЕМНАЯ ТЕМА -->
-    <style name="page_settings_switch">
+    <style name="page_settings_switch" parent="Widget.AppCompat.CompoundButton.Switch">
         <!-- Размеры -->
         <item name="android:layout_width">56dp</item>
         <item name="android:layout_height">match_parent</item>

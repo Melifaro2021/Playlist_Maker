@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,16 +13,16 @@
         android:theme="@style/Base.Theme.Playlist_Maker"
         tools:targetApi="34">
         <activity
-            android:name=".SearchActivity"
+            android:name="ru.makskim.playlistMaker.SearchActivity"
             android:exported="true" />
         <activity
-            android:name=".MediatekaActivity"
+            android:name="ru.makskim.playlistMaker.MediatekaActivity"
             android:exported="true" />
         <activity
-            android:name=".SettingsActivity"
+            android:name="ru.makskim.playlistMaker.SettingsActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="ru.makskim.playlistMaker.MainActivity"
             android:exported="true"
             android:theme="@style/Base.Theme.Playlist_Maker">
             <intent-filter>

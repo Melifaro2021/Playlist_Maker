@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- СТРОКА ПЕСНИ -->
+    <style name="view_song">
+        <!-- Размеры -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Отступы -->
+        <item name="android:paddingLeft">@dimen/pad12dp</item>
+        <item name="android:paddingRight">@dimen/pad12dp</item>
+        <!-- Расположение -->
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!-- КАРТИНКА ДЛЯ ПЕСНИ -->
+    <style name="view_song_img">
+        <!-- Размеры -->
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <!-- Отступы -->
+        <item name="android:layout_marginTop">@dimen/pad8dp</item>
+        <item name="android:layout_marginBottom">@dimen/pad8dp</item>
+    </style>
+    <!-- ОПИСАНИЕ ПЕСНИ -->
+    <style name="view_song_description">
+        <!-- Размеры -->
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <!-- Отступы -->
+        <item name="android:paddingTop">@dimen/pad8dp</item>
+        <item name="android:paddingBottom">@dimen/pad8dp</item>
+        <item name="android:layout_marginLeft">@dimen/pad8dp</item>
+        <item name="android:layout_marginRight">@dimen/pad8dp</item>
+        <!-- Расположение -->
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!-- НАЗВАНИЕ ПЕСНИ -->
+    <style name="view_song_name">
+        <!-- Размеры -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- в одну строку -->
+        <item name="android:maxLines">1</item>
+        <!-- Размеры шрифта-->
+        <item name="android:textSize">@dimen/text16</item>
+        <!-- Цвет текста -->
+        <item name="android:textColor">@color/search_page_song_name</item>
+        <!-- Сам текст -->
+        <item name="android:text">@string/song_name</item>
+        <!-- Многоточие, если текст не помещается  -->
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!-- ИСПОЛНИТЕЛЬ ПЕСНИ -->
+    <style name="view_song_artist">
+        <!-- Размеры -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">200dp</item>
+        <!-- Расположение -->
+        <item name="android:gravity">center_vertical</item>
+        <!-- Многоточие, если текст не помещается  -->
+        <item name="android:ellipsize">end</item>
+        <!-- Сам текст -->
+        <item name="android:text">@string/artist_name</item>
+        <!-- Цвет текста -->
+        <item name="android:textColor">@color/search_page_song_info</item>
+        <!-- в одну строку -->
+        <item name="android:maxLines">1</item>
+    </style>
+    <!-- ТОЧКА РАЗДЕЛИТЕЛЬ -->
+    <style name="view_song_dot">
+        <!-- Размеры -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Расположение -->
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <!-- ДЛИТЕЛЬНОСТЬ ПЕСНИ -->
+    <style name="view_song_time">
+        <!-- Размеры -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Цвет текста #AEAFB4 -->
+        <item name="android:textColor">@color/search_page_song_info</item>
+        <!-- Размеры шрифта-->
+        <item name="android:textSize">@dimen/text12</item>
+        <!-- Сам текст -->
+        <item name="android:text">@string/song_time</item>
+        <!-- в одну строку -->
+        <item name="android:maxLines">1</item>
+    </style>
+    <!-- ИГРАТЬ ПЕСНЮ -->
+    <style name="view_song_play">
+        <!-- Размеры -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Отступы -->
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingBottom">19dp</item>
+        <item name="android:layout_marginLeft">@dimen/pad8dp</item>
+        <item name="android:layout_marginRight">@dimen/pad12dp</item>
+        <!-- Цвет иконки -->
+        <item name="android:tint">@color/search_page_ico_play</item>
+        <!-- Описание -->
+        <item name="android:contentDescription">@string/arr</item>
+    </style>
+</resources>

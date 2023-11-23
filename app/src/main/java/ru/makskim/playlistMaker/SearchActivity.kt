@@ -1,30 +1,40 @@
-package ru.makskim.playlist_maker
+package ru.makskim.playlistMaker
 
 import android.annotation.SuppressLint
-
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.ImageView
-import android.view.View
-import android.widget.EditText
-import androidx.constraintlayout.widget.ConstraintLayout
 import android.content.Context
-import android.view.inputmethod.InputMethodManager
-import android.text.TextWatcher
+import android.os.Bundle
 import android.text.Editable
+import android.text.TextWatcher
+import android.view.View
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.recyclerview.widget.RecyclerView
+import ru.makskim.playlistMaker.MockPlaylist.mockPlaylist
 
 class SearchActivity : AppCompatActivity() {
-    private lateinit var inputEditText: EditText // 1. Поле поиска
-    private lateinit var searchQuery: String // 2. Поле ввода текста
-    private lateinit var searchField: ConstraintLayout // 3. Иконка крестика
+    private lateinit var inputEditText: EditText // 1. Строка ввода текста в поле поиска
+    private var searchQuery: String = "" // 2. Поле ввода текста
+    private lateinit var searchField: ConstraintLayout // 3. Поле поиска
+    private lateinit var rvSearchSongs: RecyclerView // 4. Определим RecyclerView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
+        rvSearchSongs = findViewById(R.id.rv_search_songs) // 4. Определим RecyclerView
 
         searchField = findViewById(R.id.searchField) // 1. Поле поиска
         inputEditText = findViewById(R.id.inputEditText) // 2. Поле ввода текста
         val clearButton = findViewById<ImageView>(R.id.clearSearchFieldIcon) // 3. Иконка крестика
+
+        val searchAdapter = SearchAdapter(mockPlaylist)
+        rvSearchSongs.adapter = searchAdapter
+
+        if (savedInstanceState != null){
+            inputEditText.setText(savedInstanceState.getString(KEY, DEF_SEARCH) )
+        }
 
         initBackButton() // Стрелка назад, вызов
 
@@ -40,10 +50,9 @@ class SearchActivity : AppCompatActivity() {
             }
             override fun onTextChanged( s: CharSequence?, start: Int, before: Int, count: Int)  {
                 clearButton.visibility = clearButtonVisibility(s)
-                searchQuery = s.toString() // Обновляем searchQuery при изменении текста
             }
             override fun afterTextChanged(s: Editable?) {
-                // empty
+                searchQuery = s.toString() // Обновляем searchQuery при изменении текста
             }
         }
         inputEditText.addTextChangedListener(simpleTextWatcher)
@@ -78,21 +87,14 @@ class SearchActivity : AppCompatActivity() {
     private var restoredQuery:String = DEF_SEARCH
     // Переопределить метод onRestoreInstanceState(Восстановление состояния экземпляра),
     // чтобы достать данные из Bundle при помощи метода getString и установить их в EditText.
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        restoredQuery = savedInstanceState.getString(KEY, DEF_SEARCH)
-        if (restoredQuery != null) {
-            searchQuery = restoredQuery
-            val inputEditText = findViewById<EditText>(R.id.inputEditText)
-            inputEditText.setText(searchQuery)
-        }
-    }
+
+
     // В Kotlin для создания константной переменной мы используем companion object.
     // Ключ должен быть константным, чтобы мы точно знали, что он не изменится
+
     companion object {
         const val KEY = "search"
         const val DEF_SEARCH = ""
     }
     /* Хранение данных END */
 }
-

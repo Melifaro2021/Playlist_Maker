@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="ru.makskim.playlistMaker.MainActivity">
     <!-- Общий контейнер -->
     <LinearLayout
         style="@style/page_settings"
@@ -16,7 +16,8 @@
             <!-- Стрелка назад -->
             <ImageView
                 style="@style/page_settings_arr_back"
-                android:id="@+id/arrBack"/>
+                android:id="@+id/arrBack"
+                android:contentDescription="@string/arr_to_main" />
             <!-- Заголовок настройки -->
             <TextView
                 style="@style/page_settings_txt_settings"/>
@@ -30,7 +31,9 @@
             <!-- Переключатель -->
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchcompat"
-                style="@style/page_settings_switch" />
+                app:thumbTint="@color/switchThumb"
+                app:trackTint="@color/switchThumbLine"
+                style="@style/page_settings_switch"  />
         </LinearLayout>
         <!-- СТРОКА 3 ПОДЕЛИТЬСЯ ПРИЛОЖЕНИЕМ -->
         <LinearLayout

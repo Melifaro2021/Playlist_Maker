@@ -1,6 +1,6 @@
 <resources>
     <!-- ГЛАВНАЯ СТРАНИЦА START -->
-    <string name="app_name">Playlist_Maker</string>
+    <string name="app_name">playlistMaker</string>
     <string name="search">Поиск</string>
     <string name="mediateka">Медиатека</string>
     <string name="settings">Настройки</string>
@@ -14,14 +14,24 @@
     <string name="arr">Стрелка</string>
     <string name="email_name">melifaro00@yandex.ru</string>
     <string name="email">mailto:</string>
+    <string name="arr_to_main">На главную</string>
     <!-- Кнопки -->
     <string name="shareButtonText" translatable="false">https://practicum.yandex.ru/android-developer/</string>
     <string name="theme_mail">«Сообщение разработчикам и разработчицам приложения Playlist Maker»</string>
     <string name="text_mail">«Спасибо разработчикам и разработчицам за крутое приложение!»</string>
-    <string name="terms_article" translatable="false">https://yandex.ru/legal/practicum_offer/</string>
+    <string name="terms_article" >
+        https://yandex.ru/legal/practicum_offer/
+    </string>
     <!-- СТРАНИЦА НАСТРОЙКИ END -->
-    <!-- СТРАНИЦА ПОИСКА SRART -->
+    <!-- СТРАНИЦА ПОИСКА START -->
     <string name="loupe">Лупа</string>
     <string name="delete_button">Крестик</string>
+    <string name="song_foto">Картинка песни</string>
+    <string name="dot">Точка</string>
+    <string name="song_search">Песня</string>
+    <string name="play">Играть</string>
+    <string name="song_name">Yesterday(Remastered 2009)</string>
+    <string name="artist_name">The Beatles</string>
+    <string name="song_time">2:55</string>
     <!-- СТРАНИЦА ПОИСКА END -->
 </resources>

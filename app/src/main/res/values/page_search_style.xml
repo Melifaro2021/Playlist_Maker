@@ -46,9 +46,10 @@
         <item name="android:orientation">horizontal</item>
         <!-- Отступы -->
         <item name="android:layout_marginTop">8dp</item>
-        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
         <item name="android:layout_marginLeft">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
+
     </style>
     <!-- ИКОНКА ЛУПЫ -->
     <style name="page_search_loupe">

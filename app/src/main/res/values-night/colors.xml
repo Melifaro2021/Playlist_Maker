@@ -8,14 +8,20 @@
     <color name="settings_page_background">#1A1B22</color><!-- Фон -->
     <color name="settings_page_txt">#FFFFFFFF</color><!-- Текст  -->
     <color name="settings_page_ico">#FFFFFFFF</color><!-- Иконки -->
+    <color name="switchThumb">#3772E7</color> <!-- Переключатель-->
+    <color name="switchThumbLine">#9FBBF3</color><!-- Полоса переключателя -->
     <!-- СТРАНИЦА НАСТРОЕК END -->
 
-    <!-- СТРАНИЦА ПОИСКА START ico_loupe-->
+    <!-- СТРАНИЦА ПОИСКА START -->
+    <color name="search_page_background">#1A1B22</color><!-- Фон -->
     <color name="search_page_ico_arr_back">#FFFFFFFF</color><!-- Стрелка назад -->
     <color name="search_page_head">#FFFFFFFF</color><!-- Цвет заголовка  -->
     <color name="search_page_txt_input">#1A1B22</color><!-- Подсказка в строке поиска -->
     <color name="search_background">#E6E8EB</color><!-- фон строки поиска-->
     <color name="search_page_ico">#1A1B22</color><!-- иконки в строке поиска: Лупа, крестик, настройки, микрофон -->
+    <color name="search_page_song_name">#FFFFFF</color><!-- Название песни -->
+    <color name="search_page_song_info">#FFFFFF</color><!-- Исполнитель, длительность песни -->
+    <color name="search_page_ico_play">#FFFFFF</color><!-- Играть песню -->
     <!-- СТРАНИЦА ПОИСКА END -->
 
     <!-- Статичные цвета для темной и светлой темы -->
