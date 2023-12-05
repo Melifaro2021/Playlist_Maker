@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,10 +9,9 @@
     <LinearLayout
         style="@style/page_search"
         tools:ignore="MissingConstraints">
-        <!-- Строка 1 Поиск -->
+        <!-- Заголовок страницы -->
         <LinearLayout
-            style="@style/page_search_string_head"
-            >
+            style="@style/page_search_string_head" >
             <!-- Стрелка назад -->
             <ImageView
                 android:id="@+id/arr_back_search_to_main"
@@ -43,8 +41,36 @@
                 style="@style/page_search_x"
                 android:id="@+id/clearSearchFieldIcon"
                 android:contentDescription="@string/delete_button" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Результат поиска: Ничего не нашлось -->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/nothing_found_layout"
+            style="@style/error_layout">
+            <ImageView
+                style="@style/errorsNoSearchResult"
+                android:contentDescription="@string/nothing_found"/>
+            <TextView
+                android:text="@string/nothing_found"
+                style="@style/txtError"/>
+        </LinearLayout>
+        <!-- Результат поиска: Нет интернета -->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/no_internet_layout"
+            style="@style/error_layout">
+            <ImageView
+                android:id="@+id/imgErrorsNoInternet"
+                style="@style/errorsNoInternet"
+                android:contentDescription="@string/disconnect" />
+            <TextView
+                android:text="@string/noInternet"
+                style="@style/txtError"/>
+            <Button
+                android:id="@+id/search_refresh"
+                style="@style/RefreshButton"/>
+        </LinearLayout>
+        <!-- Результаты поиска  -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_search_songs"
             android:layout_width="match_parent"

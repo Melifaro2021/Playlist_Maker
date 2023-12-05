@@ -6,6 +6,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val songName = itemView.findViewById<TextView>(R.id.song_name) // Название композиции
@@ -16,7 +18,8 @@ class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(item: Track) {
         songName.text = item.trackName // Имя исполнителя
         artistName.text = item.artistName // Название композиции
-        songTime.text = item.trackTime // Продолжительность трека
+        songTime.text = SimpleDateFormat("mm:ss", Locale.getDefault()).format(item.trackTimeMillis)// отобразить время в формате mm:ss (например, 04:53)
+
         // Ссылка на изображение обложки
         Glide.with(itemView.context)
             .load(item.artworkUrl100)

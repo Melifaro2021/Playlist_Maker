@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- КАРТИНКА НЕТ ИНТЕРНЕТА -->
+    <style name="errorsNoInternet">
+        <item name="android:src">@drawable/errors_no_internet_dark</item>
+        <!-- Размеры -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Расположение -->
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!-- КАРТИНКА НЕТ РЕЗУЛЬТАТОВ ПОИСКА -->
+    <style name="errorsNoSearchResult">
+        <item name="android:src">@drawable/errors_no_search_result_dark</item>
+        <!-- Размеры -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Расположение -->
+        <item name="android:layout_gravity">center</item>
+    </style>
+</resources>

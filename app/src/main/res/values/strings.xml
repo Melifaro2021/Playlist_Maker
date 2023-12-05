@@ -33,5 +33,10 @@
     <string name="song_name">Yesterday(Remastered 2009)</string>
     <string name="artist_name">The Beatles</string>
     <string name="song_time">2:55</string>
+
+    <string name="nothing_found">Ничего не нашлось</string>
+    <string name="disconnect">Нет интернета</string>
+    <string name="noInternet">Проблемы со связью\n\n Загрузка не удалась. Проверьте подключение к интернету</string>
+    <string name="refresh">Обновить</string>
     <!-- СТРАНИЦА ПОИСКА END -->
 </resources>
