@@ -22,6 +22,8 @@
     <color name="search_page_song_name">#FFFFFF</color><!-- Название песни -->
     <color name="search_page_song_info">#FFFFFF</color><!-- Исполнитель, длительность песни -->
     <color name="search_page_ico_play">#FFFFFF</color><!-- Играть песню -->
+    <color name="search_page_refresh_btn">#FFFFFF</color><!-- Кнопка обновить -->
+    <color name="search_page_refresh_btn_txt">#1A1B22</color><!-- Кнопка обновить текст -->
     <!-- СТРАНИЦА ПОИСКА END -->
 
     <!-- Статичные цвета для темной и светлой темы -->
