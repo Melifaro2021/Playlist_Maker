@@ -5,7 +5,8 @@ data class SearchResult(
     val resultCount: Int,
     val results: List<Track>
 )
-data class Track (
+
+data class Track(
     val trackName: String, // Название композиции
     val artistName: String, // Имя исполнителя
     val trackTimeMillis: Int, // Продолжительность трека

@@ -6,36 +6,24 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
     </style>
-    <!-- СТРЕЛКА НАЗАД -->
-    <style name="page_search_arr_back">
-        <!-- Svg иконка -->
-        <item name="android:src">@drawable/ico_arr_back</item>
-        <!-- Размеры -->
-        <item name="android:layout_width">@dimen/ico48</item>
-        <item name="android:layout_height">match_parent</item>
-        <!-- Цвет иконки -->
-        <item name="android:tint">@color/search_page_ico_arr_back</item>
-        <!-- Отступы -->
-        <item name="android:padding">@dimen/pad12dp</item>
-        <!-- Описание -->
-        <item name="android:contentDescription">@string/arr</item>
-    </style>
     <!-- ЗАГОЛОВОК СТРАНИЦЫ ПОИСКА -->
     <style name="page_search_string_head">
         <!-- Размеры -->
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
+        <!-- Иконка -->
+        <item name="navigationIcon">@drawable/ico_arr_back</item>
         <!-- Размер текста -->
         <item name="android:textSize">@dimen/head26</item>
         <!-- Цвет текста -->
         <item name="android:textColor">@color/search_page_head</item>
+        <!-- Расположение -->
+        <item name="layout_constraintTop_toTopOf">parent</item>
         <!-- Отступы -->
-        <item name="android:paddingTop">10dp</item>
         <item name="android:paddingRight">86dp</item>
-        <item name="android:paddingBottom">@dimen/pad12dp</item>
         <item name="android:paddingLeft">@dimen/pad12dp</item>
-    </style>
-    <!-- ПОЛЕ ПОИСКА, не путать с вводом строки -->
+</style>
+<!-- ПОЛЕ ПОИСКА, не путать с вводом строки -->
     <style name="page_search_search_string">
         <!-- Размеры -->
         <item name="android:layout_width">match_parent</item>

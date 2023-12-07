@@ -14,6 +14,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -48,14 +49,14 @@ class SearchActivity : AppCompatActivity() {
         rvSearchSongs.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rvSearchSongs.adapter = adapter
 
-        if (savedInstanceState != null){
-            inputEditText.setText(savedInstanceState.getString(KEY, DEF_SEARCH) )
+        initBackButton()
+
+        if (savedInstanceState != null) {
+            inputEditText.setText(savedInstanceState.getString(KEY, DEF_SEARCH))
         }
 
-        initBackButton() // Стрелка назад, вызов
-
         clearButton.visibility = View.INVISIBLE
-        clearButton.setOnClickListener{
+        clearButton.setOnClickListener {
             inputEditText.text.clear() // Очистить поле поиска
             hideKeyboard() // Скрываем клавиатуру после очистки поля
             trackList.clear() // Очистить результаты поиска
@@ -63,7 +64,8 @@ class SearchActivity : AppCompatActivity() {
         }
         // логика по работе с введённым значением
         val simpleTextWatcher = object : TextWatcher {
-            override fun beforeTextChanged( s: CharSequence?, start: Int, count: Int, after: Int) =  Unit
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) =
+                Unit
             /**
              * onTextChanged: внесены изменения, неĸоторые символы тольĸо что были заменены.
              * Теĸст не может быть изменён. Это событие используется, ĸогда нам нужно увидеть,
@@ -75,10 +77,11 @@ class SearchActivity : AppCompatActivity() {
              * только что заменили старый текст длиной <code>до</code>.
              * Попытка внести изменения в <code>s</code> из этот обратный вызов.
              */
-            override fun onTextChanged( s: CharSequence?, start: Int, before: Int, count: Int)  {
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 clearButton.visibility = clearButtonVisibility(s)
                 searchQuery = inputEditText.text.toString()
             }
+
             override fun afterTextChanged(s: Editable?) = Unit
         }
         inputEditText.addTextChangedListener(simpleTextWatcher)
@@ -87,7 +90,7 @@ class SearchActivity : AppCompatActivity() {
          * на клавиатуре в правой нижней её части кнопка переноса  строки будет заменена на кнопку Done
          * Чтобы обработать нажатие на кнопку Done, к соответствующему экземпляру EditText
          * нужно добавить специального слушателя:
-        */
+         */
         inputEditText.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 sendSearch()// ВЫПОЛНЯЙТЕ ПОИСКОВЫЙ ЗАПРОС ЗДЕСЬ startSearch
@@ -103,16 +106,21 @@ class SearchActivity : AppCompatActivity() {
 
     // Функция: Стрелка назад, вернуться на предыдущую страницу
     private fun initBackButton() {
-        val backButton = findViewById<ImageView>(R.id.arr_back_search_to_main)
-        backButton.setOnClickListener {
-            finish()
+        val backButton = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(backButton)
+        backButton.setNavigationOnClickListener {
+            finish()// Стрелка назад, вызов
         }
     }
+
+
     // Функция для скрытия клавиатуры
     private fun hideKeyboard() {
-        val inputMethodManager =  getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+        val inputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
         inputMethodManager?.hideSoftInputFromWindow(inputEditText.windowToken, 0)
     }
+
     // Функция скрыть или показать крестик в поле поиска
     private fun clearButtonVisibility(s: CharSequence?): Int {
         return if (s.isNullOrEmpty()) {
@@ -125,19 +133,21 @@ class SearchActivity : AppCompatActivity() {
     /** Хранение данных START
      * Переопределяем метод onSaveInstanceState (Сохранение состояния экземпляра),
      * чтобы сохранить текст из EditText (search_query) в Bundle методом putString
-    */
+     */
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(KEY, searchQuery)
     }
+
     /**
      *  Переопределить метод onRestoreInstanceState(Восстановление состояния экземпляра),
      * чтобы достать данные из Bundle при помощи метода getString и установить их в EditText.
-    */
+     */
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         inputEditText.setText(savedInstanceState.getString(searchQuery))
     }
+
     // Хранение данных END
     // Начать поиск песен
     private fun sendSearch() {
@@ -149,38 +159,40 @@ class SearchActivity : AppCompatActivity() {
         if (searchRequest != null) {
             iTunesService.search(searchRequest.toString())
                 .enqueue(object : Callback<SearchResult> {
-                @SuppressLint("NotifyDataSetChanged")
-                // вызывается, когда сервер дал нам ответ для нашего запроса
-                override fun onResponse(
-                    call: Call<SearchResult>,
-                    response: Response<SearchResult>
-                ) {
-                    Log.d("TRANSLATION_LOG", "Status code: ${response.code()}")
-                    trackList.clear()
-                    if (response.isSuccessful) { // Страница открывается
-                        val songs = response.body()?.results
-                        if (songs != null) {
-                            trackList.addAll(songs)// Если есть результаты поиска
-                        }  else {
-                            nothingFound.visibility = View.VISIBLE //показать заглушку ничего не найдено
+                    @SuppressLint("NotifyDataSetChanged")
+                    // вызывается, когда сервер дал нам ответ для нашего запроса
+                    override fun onResponse(
+                        call: Call<SearchResult>,
+                        response: Response<SearchResult>
+                    ) {
+                        Log.d("TRANSLATION_LOG", "Status code: ${response.code()}")
+                        trackList.clear()
+                        if (response.isSuccessful) { // Страница открывается
+                            val songs = response.body()?.results
+                            if (!songs.isNullOrEmpty()) {
+                                trackList.addAll(songs)// Если есть результаты поиска
+                            } else {
+                                nothingFound.visibility = View.VISIBLE //показать заглушку ничего не найдено
+                            }
+                        } else {
+                            noInternet.visibility = View.VISIBLE //показать заглушку пропало соединение
                         }
-                    }  else {
-                        noInternet.visibility = View.VISIBLE //показать заглушку пропало соединение
+                        adapter.notifyDataSetChanged()// полностью перерисовать весь список
                     }
-                    adapter.notifyDataSetChanged()// полностью перерисовать весь список
-                }
-                // вызывается, когда мы не смогли установить соединение с сервером
-                override fun onFailure(call: Call<SearchResult>, t: Throwable) {
-                    trackList.clear()
-                    noInternet.visibility = View.VISIBLE
-                }
-            })
+
+                    // вызывается, когда мы не смогли установить соединение с сервером
+                    override fun onFailure(call: Call<SearchResult>, t: Throwable) {
+                        trackList.clear()
+                        noInternet.visibility = View.VISIBLE
+                    }
+                })
         }
     }
-/**
- * В Kotlin для создания константной переменной мы используем companion object.
- * Ключ должен быть константным, чтобы мы точно знали, что он не изменится
- */
+
+    /**
+     * В Kotlin для создания константной переменной мы используем companion object.
+     * Ключ должен быть константным, чтобы мы точно знали, что он не изменится
+     */
     companion object {
         const val KEY = "search"
         const val DEF_SEARCH = ""

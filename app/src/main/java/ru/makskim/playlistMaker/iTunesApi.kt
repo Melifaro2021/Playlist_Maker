@@ -7,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 const val iTunesUrl = "https://itunes.apple.com/" // Подключение API
-// Инициализация Retrofit
+// Инициализация Retrofit \
 private val retrofit = Retrofit.Builder()
     .baseUrl(iTunesUrl)
     .addConverterFactory(GsonConverterFactory.create())

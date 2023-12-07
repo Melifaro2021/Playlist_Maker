@@ -12,15 +12,11 @@
         <!-- Заголовок страницы -->
         <LinearLayout
             style="@style/page_search_string_head" >
-            <!-- Стрелка назад -->
-            <ImageView
-                android:id="@+id/arr_back_search_to_main"
-                style="@style/page_search_arr_back"
-                android:contentDescription="@string/arr" />
-            <!-- Заголовок -->
-            <TextView
+            <!-- Добавляем Toolbar:Стрелка назад + Заголовок -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 style="@style/page_search_string_head"
-                android:text="@string/search"/>
+                app:title="@string/search" />
         </LinearLayout>
         <!-- Поле поиска -->
         <androidx.constraintlayout.widget.ConstraintLayout

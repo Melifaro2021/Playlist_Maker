@@ -6,6 +6,7 @@
     <dimen name="pad12dp">12dp</dimen>
     <dimen name="pad8dp">8dp</dimen>
     <dimen name="pad4dp">4dp</dimen>
+
     <!-- Шрифты -->
     <dimen name="head26">26sp</dimen>
     <dimen name="head22">22sp</dimen>
@@ -16,5 +17,4 @@
     <!-- Размер иконок -->
     <dimen name="ico48">48dp</dimen>
     <dimen name="ico24">24dp</dimen>
-
 </resources>
