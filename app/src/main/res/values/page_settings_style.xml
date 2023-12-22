@@ -88,9 +88,10 @@
         <item name="android:layout_width">56dp</item>
         <item name="android:layout_height">match_parent</item>
         <!-- Цвет иконки -->
-        <item name="android:tint">@color/settings_page_ico</item>
+        <item name="thumbTint">@color/switchThumb</item>
+        <item name="trackTint">@color/switchThumbLine</item>
         <!-- Расположение -->
-        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_gravity">center</item>
         <!-- Отступы -->
         <item name="android:paddingTop">11dp</item>
         <item name="android:paddingRight">@dimen/pad12dp</item>
